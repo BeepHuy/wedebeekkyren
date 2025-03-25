@@ -1,0 +1,1 @@
+a:4:{s:4:"type";s:1:"0";s:7:"network";s:2:"40";s:7:"percent";s:3:"100";s:6:"smlink";s:22:"https://smartlink.d?ab";}

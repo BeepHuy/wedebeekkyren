@@ -1,0 +1,9 @@
+[0308/210944.080:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[0308/210950.187:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'unload'.", source:  (0)
+[0308/211026.820:WARNING:spdy_session.cc(3484)] Received HEADERS for invalid stream 85
+[0308/211028.461:ERROR:gpu_process_host.cc(952)] GPU process exited unexpectedly: exit_code=-36862
+[0308/211028.461:WARNING:gpu_process_host.cc(1302)] The GPU process has crashed 1 time(s)
+[0308/211028.699:WARNING:gpu_process_host.cc(975)] Reinitialized the GPU process after a crash. The reported initialization time was 83 ms
+[0308/211029.691:ERROR:gpu_process_host.cc(952)] GPU process exited unexpectedly: exit_code=-36862
+[0308/211029.691:WARNING:gpu_process_host.cc(1302)] The GPU process has crashed 2 time(s)
+[0308/211029.905:WARNING:gpu_process_host.cc(975)] Reinitialized the GPU process after a crash. The reported initialization time was 76 ms

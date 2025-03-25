@@ -1,0 +1,548 @@
+/*! CSS Used from: https://clickdealer.com/assets/d1261368/css/style-about-us.css */
+.aboutUs_page .about-us-head.section_block {
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 586px;
+    padding-top: 20px;
+    background: url("../img/head-about-us-img.png") no-repeat center;
+    background-size: cover;
+  }
+  .aboutUs_page .adertiser-head.section_block {
+    background: url("../img/adertiser-img.png") no-repeat center!important;
+  }
+  .aboutUs_page .publisher-head.section_block {
+    background: url("../img/publisher.png") no-repeat center!important;
+  }
+  .aboutUs_page .products-head.section_block {
+    background: url("../img/products.png") no-repeat center!important;
+  }  
+  .aboutUs_page .contact-head.section_block {
+    background: url("../img/contact.png") no-repeat center!important;
+  }
+  .aboutUs_page .about-us-head .section_heading {
+    color: #ffffff;
+    padding: 0;
+  }
+  .aboutUs_page .about-us-head .page_slogan {
+    color: #ffffff;
+    font-size: 27px;
+    padding-top: 35px;
+  }
+  .about-us-head.section_block .page_title {
+    margin: 0;
+  }
+  .about-us-head.section_block .page_title_in {
+    padding: 0;
+  }
+  @media screen and (max-width: 1080px) {
+    .aboutUs_page .about-us-head.section_block {
+      height: 430px;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .aboutUs_page .about-us-head.section_block {
+      height: auto;
+      padding-top: 130px;
+      padding-bottom: 120px;
+      display: block;
+    }
+    .about-us-head .section_heading {
+      font-size: 48px;
+    }
+    .aboutUs_page .about-us-head .page_slogan {
+      padding-top: 25px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+  /*! CSS Used from: https://clickdealer.com/assets/d1261368/css/style.css */
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    webkit-appearance: none;
+  }
+  h1 {
+    font-weight: normal;
+  }
+  section {
+    display: block;
+  }
+  .wrap {
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .section_block {
+    background-color: #fff;
+  }
+  .section_block .wrap {
+    position: relative;
+    z-index: 2;
+  }
+  .section_block {
+    position: relative;
+    padding: 65px 0 70px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .section_heading {
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .section_heading_singup {
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .page_title .page_title_in {
+    min-height: 100%;
+    padding-bottom: 54px;
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  .page_title {
+    margin-bottom: 30px;
+  }
+  .page_title .page_title_in {
+    min-height: 100%;
+    padding-bottom: 54px;
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  .page_title h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+    color: #4c5c65;
+  }
+  .page_slogan {
+    font-size: 18px;
+    color: #acacac;
+    text-align: center;
+    padding-top: 21px;
+  }
+  @media screen and (max-width: 1080px) {
+    .section_heading {
+      padding-bottom: 20px;
+      font-size: 38px;
+    }
+  }
+  @media all and (max-width: 480px), all and (max-width: 200px) {
+    .section_heading {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    .wrap {
+      width: auto;
+      margin: 0 15px;
+    }
+    .section_block {
+      padding: 36px 0 30px;
+    }
+    .section_heading {
+      padding-bottom: 20px;
+      font-size: 38px;
+    }
+    .page_title .page_title_in {
+      padding-bottom: 48px;
+    }
+    .page_title h1 {
+      font-size: 43px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .page_slogan {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 840px) {
+    .page_title .page_title_in {
+      background-position: center top;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .page_title {
+      margin-bottom: 20px;
+    }
+    .page_title h1 {
+      font-size: 36px;
+    }
+    .page_slogan {
+      padding-top: 18px;
+      font-size: 15px;
+    }
+    .heading_section .wrap {
+      margin: 0 16px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .wrap {
+      margin: 0 20px;
+    }
+  }
+  @media all and (max-width: 480px), all and (max-width: 200px) {
+    .section_heading {
+      font-size: 25px;
+    }
+  }
+  /*! CSS Used from: https://clickdealer.com/plugins/css/owl.carousel.min.css */
+.owl-carousel{-webkit-tap-highlight-color:transparent;position:relative;}
+.owl-carousel{display:none;width:100%;z-index:1;}
+/*! CSS Used from: https://clickdealer.com/assets/d1261368/css/style-about-us.css */
+.aboutUs_page ul{list-style-type:none;padding:0;}
+.aboutUs_page li{list-style:none;}
+.about-us-partners.section_block{background:#dedede url('../img/partners-bg.png')no-repeat left top;padding-bottom:27px;}
+.about-us-partners .section_heading{padding-top:9px;padding-bottom:46px;}
+.about-us-partners .about-partners-wrap{width:100%;max-width:1750px;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:10px;padding-right:10px;margin-top:67px;margin-left:auto;margin-right:auto;}
+.about-us-partners .about-partners-list{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.about-us-partners .about-partners-list .partners-list-i{width:14%;}
+.about-us-partners .about-partners-list .partners-list-icon{display:block;min-height:90px;margin:0 auto 70px;}
+.about-us-partners .about-partners-list .partners-list-icon:hover img{filter:grayscale(0);-webkit-filter:grayscale(0);filter:grayscale(0);opacity:1;}
+.about-us-partners .about-partners-list img{opacity:.8;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:all .4s ease;-o-transition:all .4s ease;transition:all .4s ease;display:block;filter:grayscale(100%);-webkit-filter:grayscale(100%);filter:grayscale(100%);}
+.about-us-partners .about-partners-list .huawei-icon{height:90px;}
+.about-us-partners .about-partners-list .ali-express-icon{width:126px;height:29px;}
+.about-us-partners .about-partners-list .adthink-icon{width:132px;height:25px;}
+.about-us-partners .about-partners-list .big-bang-ads-icon{width:149px;height:66px;}
+.about-us-partners .about-partners-list .uc-browser-icon{width:66px;height:76px;}
+.about-us-partners .about-partners-list .joom-icon{width:124px;height:27px;}
+.about-us-partners .about-partners-list .bemobi-icon{width:130px;height:45px;}
+.about-us-partners .about-partners-list .reimage-icon{width:119px;height:28px;}
+.about-us-partners .about-partners-list .tekka-icon{width:150px;height:48px;}
+.about-us-partners .about-partners-list .mr-green-icon{width:95px;height:76px;}
+.about-us-partners .about-partners-list .traffic-icon{width:105px;height:57px;}
+.about-us-partners .about-partners-list .jumia-icon{width:121px;height:25px;}
+.about-us-partners .about-partners-list .be-love-icon{width:81px;height:65px;}
+.about-us-partners .about-partners-list .gear-best-icon{width:100px;height:44px;}
+@media screen and (max-width: 1100px){
+.about-us-partners.section_block{padding-top:51px;padding-bottom:157px;}
+.about-us-partners .section_heading{font-size:30px;}
+.about-us-partners .section_heading + .sub_heading{font-size:18px;padding:0;text-align:justify;}
+.about-us-partners .about-partners-wrap{margin-right:0;margin-left:0;margin-top:35px;}
+.about-us-partners .about-partners-list{display:block;}
+.about-us-partners .about-partners-list .partners-list-i{width:100%;}
+.about-us-partners .about-partners-list .partners-list-icon{margin-bottom:15px;min-width:155px;}
+.about-us-partners .about-partners-list img{-webkit-filter:none;filter:none;width:auto;margin:0 auto;}
+}
+/*! CSS Used from: https://clickdealer.com/assets/d1261368/css/style.css */
+*{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;outline:none;webkit-appearance:none;}
+h4{font-weight:normal;}
+section{display:block;}
+a{-webkit-transition:background 0.3s ease, color 0.3s ease;transition:background 0.3s ease, color 0.3s ease;}
+a{color:#0954a0;}
+a:hover{text-decoration:none;}
+.about-us-partners img{display:block;border:none;}
+.wrap{width:960px;height:100%;margin:0 auto;}
+.section_block{background-color:#fff;}
+.section_block .wrap{position:relative;z-index:2;}
+.section_block{position:relative;padding:65px 0 70px;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.section_heading{font-size:48px;font-weight:700;padding-bottom:30px;text-align:center;}
+.section_heading + .sub_heading{font-size:20px;text-align:center;margin-bottom:15px;}
+@media screen and (max-width: 1080px){
+.section_heading{padding-bottom:20px;font-size:38px;}
+.section_heading + .sub_heading{font-size:17px;}
+}
+@media all and (max-width: 480px), all and (max-width: 200px){
+.section_heading{font-size:25px;}
+.section_heading + .sub_heading{padding-bottom:9px;font-size:9px;}
+}
+@media screen and (max-width: 1080px){
+.wrap{width:auto;margin:0 15px;}
+.section_block{padding:36px 0 30px;}
+.section_heading{padding-bottom:20px;font-size:38px;}
+.section_heading + .sub_heading{font-size:17px;}
+}
+@media screen and (max-width: 500px){
+.section_heading + .sub_heading{margin-bottom:0;padding-bottom:17px;padding-left:20px;padding-right:20px;}
+.wrap{margin:0 20px;}
+}
+@media all and (max-width: 480px), all and (max-width: 200px){
+.section_heading{font-size:25px;}
+.section_heading + .sub_heading{padding-bottom:9px;font-size:9px;}
+}
+.partners-list-i a img{
+  max-width: 100%;
+}
+.box-button-signup{
+  text-align: center;
+}
+.signup-aboutus{
+  width: 150px;
+  line-height: 45px;
+  color: #0704bd!important;
+}
+.signup-adver:hover{
+  color: #d5840a!important;
+  border-color:#d5840a!important;
+}
+.edit_font{
+  font-size:18px!important;
+  padding-top:15px !important;
+}
+.signup-adver{
+  width: 300px  !important;
+  line-height: 45px;
+  color: #0704bd!important;
+  border-width: 4px!important;
+}
+.center-alg{
+  text-align: center;
+}
+.publisher-list{
+  color: white !important;
+  font-style:italic ;
+}
+.bg-brand-pink{
+  background: linear-gradient(to right, #86083e 0%,#f682b4 96%);
+}
+.bg-brand-blue{
+  background: linear-gradient(to right,#00fff6 0%,#38359c 96%);
+  color: white !important;
+}
+.publisher-signup{
+    display: inline-block;
+    padding: 10px 50px;
+    border-radius: 16px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: #ffbd3e;
+    background: -moz-linear-gradient(left, #ffbd3e 0%, #ee854f 100%);
+    background: -webkit-linear-gradient(left, #ffbd3e 0%,#ee854f 100%);
+    background: linear-gradient(to right, #ffbd3e 0%,#ee854f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbd3e', endColorstr='#ee854f',GradientType=1 );
+    cursor: pointer;
+}
+.edit_font_signup{
+  text-align: center;
+}
+/*! CSS Used from: https://clickdealer.com/plugins/css/font-awesome.css */
+.pull-right{float:right;}
+.pull-left{float:left;}
+/*! CSS Used from: https://clickdealer.com/assets/3512f442/css/bootstrap.min.css */
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+svg:not(:root){overflow:hidden;}
+button,input,select,textarea{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button,select{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+input{line-height:normal;}
+textarea{overflow:auto;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+h3,p{orphans:3;widows:3;}
+h3{page-break-after:avoid;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#337ab7;text-decoration:none;}
+a:focus,a:hover{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+h3{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h3{margin-top:20px;margin-bottom:10px;}
+h3{font-size:24px;}
+p{margin:0 0 10px;}
+ul{margin-top:0;margin-bottom:10px;}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;}
+.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);}
+textarea.form-control{height:auto;}
+.form-group{margin-bottom:15px;}
+.help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373;}
+.btn{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.btn:active:focus,.btn:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:focus,.btn:hover{color:#333;text-decoration:none;}
+.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125);}
+.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px dashed;border-top:4px solid\9;border-right:4px solid transparent;border-left:4px solid transparent;}
+.clearfix:after,.clearfix:before{display:table;content:" ";}
+.clearfix:after{clear:both;}
+.pull-right{float:right!important;}
+.pull-left{float:left!important;}
+/*! CSS Used from: https://clickdealer.com/assets/d1261368/css/style.css */
+*{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;outline:none;webkit-appearance:none;}
+h3{font-weight:normal;}
+textarea{resize:vertical;overflow:auto;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden;}
+a{-webkit-transition:background 0.3s ease, color 0.3s ease;transition:background 0.3s ease, color 0.3s ease;}
+a{color:#0954a0;}
+a:hover{text-decoration:none;}
+.btn{display:inline-block;padding:0 30px;border-radius:16px;text-align:center;color:#fff;text-decoration:none;background:#ffbd3e;background:-moz-linear-gradient(left, #ffbd3e 0%, #ee854f 100%);background:-webkit-linear-gradient(left, #ffbd3e 0%,#ee854f 100%);background:linear-gradient(to right, #ffbd3e 0%,#ee854f 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbd3e', endColorstr='#ee854f',GradientType=1 );cursor:pointer;}
+.btn:hover{background:#ffbd3e;background:-moz-linear-gradient(left, #ffbd3e 35%, #ee854f 100%);background:-webkit-linear-gradient(left, #ffbd3e 35%,#ee854f 100%);background:linear-gradient(to right, #ffbd3e 35%,#ee854f 100%);}
+.section_heading{font-size:48px;font-weight:700;padding-bottom:30px;text-align:center;}
+.section_heading + .sub_heading{font-size:20px;text-align:center;margin-bottom:15px;}
+.contact_address{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;justify-content:space-around;}
+.contact_us .section_heading{text-align:left;padding-top:28px;padding-bottom:9px;line-height:50px;}
+.contact_us .section_heading + .sub_heading{text-align:left;font-size:18px;}
+.contact_us .contact_left_section{width:690px;padding:20px 80px 65px 78px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.contact_us .contact_right_section{width:270px;min-width:270px;padding:20px 52px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;background:url(https://wedebeek.com/upload/images/contacts_info_bg.png) no-repeat center;background-size:cover;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;}
+.contact_form{font-size:16px;}
+input.select-dropdown{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+.contact_address .contact_form{margin-top:60px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.contact_form .form-group .help-block-error{text-align:right;}
+.contact_form .form_elem_box{margin-top:15px;}
+.contact_form .message_box{margin-top:25px;}
+.contact_form .message_box .form-control.materialize-textarea{margin-top:20px;box-shadow:none;}
+.contact_form .recipient_field{margin-top:34px;}
+.contact_form .recipient_field input[type=text].select-dropdown{font-size:16px;line-height:1.8rem;color:#9d9d9d;padding-right:22px;padding-bottom:6px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.contact_form .form-group{position:relative;min-height:45px;}
+.contact_form .form-group .caret{position:absolute;text-indent:-9999px;display:block;right:0px;top:5px;pointer-events:none;}
+.contact_form .form-group.field-contactform-recaptcha{min-height:95px;}
+.contact_form .name_address_box{margin-top:0;}
+.input-field label{display:block;font-size:14px;font-weight:700;}
+.contact_form .field_box{position:relative;}
+.contact_form input[type="text"],.contact_form textarea{display:block;width:100%;padding:9px 10px;border-radius:6px;border:1px solid #dcdcdc;color:#656c71;background-color:#fff;webkit-box-sizing:border-box;box-sizing:border-box;}
+.input-field input[type=text]:not(.browser-default),.input-field textarea{padding:0;background-color:transparent;border:none;border-bottom:1px solid #9e9e9e;border-radius:0;outline:none;height:1.8em;width:100%;font-size:1contact_formem;-webkit-box-shadow:none;box-shadow:none;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-transition:all 0.3s;transition:all 0.3s;}
+.input-field textarea{overflow-y:hidden;resize:none;min-height:1.8rem;}
+.input-field input{line-height:normal;}
+.input-field input,.input-field select,.input-field textarea{color:inherit;font:inherit;margin:0;}
+.input-field label{font-size:.8rem;color:#9e9e9e;}
+.input-field label{color:#656c71;position:absolute;top:0;left:0;height:30px;font-size:16px;font-weight:bold;cursor:text;-webkit-transition:-webkit-transform .2s ease-out;transition:-webkit-transform .2s ease-out;transition:transform .2s ease-out;transition:transform .2s ease-out, -webkit-transform .2s ease-out;webkit-transform-origin:0% 100%;transform-origin:0% 100%;text-align:initial;webkit-transform:translateY(4px);transform:translateY(4px);pointer-events:none;}
+.input-field input[type=text]:not(.browser-default):focus:not([readonly])+label{color:#9d9d9d;font-size:12px;}
+.select-wrapper + label:after{display:block;content:"";position:absolute;top:100%;left:0;opacity:0;webkit-transition:.2s opacity ease-out, .2s color ease-out;transition:.2s opacity ease-out, .2s color ease-out;}
+.select-wrapper{position:relative;}
+.select-wrapper input.select-dropdown{position:relative;cursor:pointer;background-color:transparent;border:none;border-bottom:1px solid #9e9e9e;outline:none;height:3rem;line-height:3rem;width:100%;font-size:1rem;margin:0 0 20px 0;padding:0;display:block;webkit-user-select:none;moz-user-select:none;ms-user-select:none;user-select:none;}
+.contact_form .select-wrapper+label{position:absolute;top:-26px;}
+.select-wrapper select:disabled{color:rgba(0, 0, 0, 0.42);}
+.select-wrapper input.select-dropdown:disabled{color:rgba(0, 0, 0, 0.42);cursor:default;webkit-user-select:none;moz-user-select:none;ms-user-select:none;user-select:none;}
+.select-dropdown.dropdown-content li:hover{background-color:rgba(0, 0, 0, 0.06);}
+.select-dropdown.dropdown-content li.selected{background-color:rgba(0, 0, 0, 0.03);}
+.dropdown-content{background-color:#fff;margin:0;display:none;min-width:100px;max-height:650px;overflow-y:auto;opacity:0;position:absolute;z-index:999;will-change:width, height;border:1px solid #000;}
+.select-wrapper select{display:none;}
+.dropdown-content{background-color:#fff;margin:0;display:none;min-width:100px;max-height:650px;overflow-y:auto;opacity:0;position:absolute;z-index:999;will-change:width, height;border:1px solid #9e9e9e;}
+.dropdown-content li{clear:both;color:rgba(0, 0, 0, 0.87);cursor:pointer;width:100%;text-align:left;text-transform:none;}
+.dropdown-content li:hover,.dropdown-content li.selected{background-color:#eee;}
+.dropdown-content li > span{font-size:14px;color:#9d9d9d;display:block;line-height:21px;padding:5px;}
+select.form_select{border:none;background-color:transparent;border-bottom:1px solid #e0e0e0;border-radius:0;outline:none;height:1.8rem;width:100%;font-size:1rem;padding:0;box-shadow:none;box-sizing:content-box;transition:all 0.3s;font-weight:bold;}
+.recipient_field label{position:absolute;}
+select.form_select{border:none;background-color:transparent;border-bottom:1px solid #e0e0e0;border-radius:0;outline:none;height:1.8rem;width:100%;font-size:1rem;padding:0;box-shadow:none;box-sizing:content-box;transition:all 0.3s;font-weight:bold;}
+.require_icon{color:#ffb14c;}
+.require_info{font-size:14px;color:#a7a5a5;}
+.contact_form .require_info{margin-top:-7px;margin-bottom:4px;text-align:right;padding-right:24px;}
+.name_address_box .name_field{width:250px;float:left;}
+.name_address_box .email_field{width:250px;float:right;}
+.contact_form .captcha_submit{margin-top:45px;}
+.captcha_submit .captcha_holder{position:relative;float:left;width:302px;}
+.captcha_submit .form__submit-holder{position:relative;float:right;width:202px;}
+.captcha_submit button[type="submit"]{display:inline-block;position:relative;height:60px;width:200px;padding:0 43px;border-radius:28px;text-transform:uppercase;font-size:21px;line-height:60px;color:#fffefe;cursor:pointer;background:transparent;overflow:hidden;z-index:2;}
+.captcha_submit button[type="submit"] .fill-btn{position:absolute;background:-moz-linear-gradient(left, #fece4d 0%, #ffb14c 31%, #e86545 99%);background:-webkit-linear-gradient(left, #fece4d 0%,#ffb14c 31%,#e86545 99%);background:linear-gradient(to right, #fece4d 0%,#ffb14c 31%,#e86545 99%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fece4d', endColorstr='#e86545',GradientType=1 );background-size:150% 150%;right:0;top:0;height:70px;width:300px;z-index:-1;transition:all 0.4s ease;}
+.captcha_submit button[type="submit"]:hover .fill-btn{position:absolute;background:-moz-linear-gradient(left, #fece4d 0%, #ffb14c 31%, #e86545 99%);background:-webkit-linear-gradient(left, #fece4d 0%,#ffb14c 31%,#e86545 99%);background:linear-gradient(to right, #fece4d 0%,#ffb14c 31%,#e86545 99%);background-size:150% 150%;z-index:-1;transition:all 0.4s ease;top:0;webkit-animation:gradient 3s ease infinite;moz-animation:gradient 3s ease infinite;animation:gradient 3s ease infinite;}
+.captcha_submit button[type="button"]{display:inline-block;position:relative;height:60px;width:200px;padding:0 43px;border-radius:28px;text-transform:uppercase;font-size:21px;line-height:60px;color:#fffefe;cursor:pointer;background:transparent;overflow:hidden;z-index:2;}
+.captcha_submit button[type="button"] .fill-btn{position:absolute;background:-moz-linear-gradient(left, #fece4d 0%, #ffb14c 31%, #e86545 99%);background:-webkit-linear-gradient(left, #fece4d 0%,#ffb14c 31%,#e86545 99%);background:linear-gradient(to right, #fece4d 0%,#ffb14c 31%,#e86545 99%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fece4d', endColorstr='#e86545',GradientType=1 );background-size:150% 150%;right:0;top:0;height:70px;width:300px;z-index:-1;transition:all 0.4s ease;}
+.captcha_submit button[type="button"]:hover .fill-btn{position:absolute;background:-moz-linear-gradient(left, #fece4d 0%, #ffb14c 31%, #e86545 99%);background:-webkit-linear-gradient(left, #fece4d 0%,#ffb14c 31%,#e86545 99%);background:linear-gradient(to right, #fece4d 0%,#ffb14c 31%,#e86545 99%);background-size:150% 150%;z-index:-1;transition:all 0.4s ease;top:0;webkit-animation:gradient 3s ease infinite;moz-animation:gradient 3s ease infinite;animation:gradient 3s ease infinite;}
+
+.contact_address .contacts_info{width:100%;font-size:14px;line-height:1.4;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.contacts_info .info_block{margin-top:29px;text-align:left;}
+.contacts_info .info_block:first-child{margin-top:0;}
+.contacts_info .info_block .heading{margin-bottom:8px;font-weight:700;font-size:16px;color:#fff;}
+.contacts_info .info_block p{color:#ffffff;font-size:16px;line-height:24px;}
+.contacts_info .info_block a{color:#ffffff;font-weight:700;}
+.contacts_info .info_block a{text-decoration:none;}
+@media screen and (max-width: 850px){
+.contact_address{display:block;}
+.contact_us .contact_left_section{margin-left:auto;margin-right:auto;background-color:#fff;}
+.contact_us .contact_right_section{margin:0 auto 150px;width:100%;padding:20 32px;}
+.contact_address .contacts_info{display:flex;align-items:flex-start;justify-content:space-around;}
+.contacts_info .info_block{margin:0 10px;}
+.contacts_info .contact_block{white-space:nowrap;}
+.contacts_info .info_block br{display:none;}
+}
+@media screen and (max-width: 1080px){
+.section_heading{padding-bottom:20px;font-size:38px;}
+.section_heading + .sub_heading{font-size:17px;}
+}
+@media all and (max-width: 480px), all and (max-width: 200px){
+.section_heading{font-size:25px;}
+.section_heading + .sub_heading{padding-bottom:9px;font-size:9px;}
+}
+@media screen and (max-width: 1250px){
+.contact_address .contact_left_section{float:none;width:100%;margin:0;border:none;}
+}
+@media screen and (max-width: 1080px){
+.section_heading{padding-bottom:20px;font-size:38px;}
+.section_heading + .sub_heading{font-size:17px;}
+.name_address_box .email_field{margin-top:25px;}
+.captcha_submit .form__submit-holder{width:auto;}
+.contact_form .captcha_submit{margin-right:0;margin-top:35px;}
+.name_address_box .name_field,.name_address_box .email_field{float:none;width:auto;}
+}
+@media screen and (max-width: 900px){
+.contact_form .require_info{text-align:left;}
+}
+@media screen and (max-width: 700px){
+.captcha_submit .captcha_holder{float:none;}
+.captcha_submit button[type="submit"]{display:block;float:none;width:192px;margin-top:5px;}
+.captcha_submit .captcha_holder{float:none;}
+.captcha_submit .form__submit-holder{float:none;margin-top:15px;}
+}
+@media screen and (max-width: 662px){
+.contact_address .contact_left_section{padding:40px 15px;}
+}
+@media screen and (max-width: 620px){
+.captcha_submit .captcha_holder{width:302px;margin-left:auto;margin-right:auto;}
+}
+@media screen and (max-width: 580px){
+.contact_form .form-group.field-contactform-recaptcha .g-recaptcha > div{width:100%!important;}
+}
+@media screen and (max-width: 500px){
+.contact_address{padding-top:0;}
+.contact_us .section_heading{padding-top:30px;padding-bottom:0;background:#fff;padding-right:20px;}
+.contact_us .section_heading + .sub_heading{font-size:14px;background:#fff;padding-left:0;}
+.section_heading + .sub_heading{margin-bottom:0;padding-bottom:17px;padding-left:20px;padding-right:20px;}
+.contact_form .captcha_submit{background:#fff;}
+.contact_address .contact_form{background:#fff;padding:15px 20px 50px;margin-top:0;}
+.contact_address .contacts_info{width:100%;}
+.contact_us .contact_right_section{padding:40px 28px;}
+.dropdown-content li > span{line-height:25px;padding:3px 5px;}
+.contact_form .recipient_field input[type=text].select-dropdown{font-size:13px;margin-bottom:0;}
+.contact_form .require_info{text-align:center;padding-right:0;}
+.captcha_submit button[type="submit"]{margin-left:auto;margin-right:auto;}
+.captcha_submit .form__submit-holder{margin-top:20px;}
+.name_address_box .email_field{margin-top:17px;}
+.contact_form .recipient_field{margin-top:17px;}
+.contact_form .recipient_field.message_box{margin-top:15px;}
+}
+@media screen and (max-width: 400px){
+.contact_address .contacts_info{justify-content:flex-start;flex-wrap:wrap;}
+.contacts_info .info_block:first-child{margin-bottom:29px;}
+}
+@media all and (max-width: 480px), all and (max-width: 200px){
+.section_heading{font-size:25px;}
+.section_heading + .sub_heading{padding-bottom:9px;font-size:9px;}
+}
+@media screen and (max-width: 400px){
+.contact_form .form-group.field-contactform-recaptcha{width:100%;margin-left:-11px;margin-right:-10px;}
+.contact_address .contact_form{padding:15px 0 50px;}
+}
+.form-group .help-block{font-size:12px;}
+.form-group .help-block-error{color:#e23131;}
+.field-contactform-recipient .caret{position:absolute;text-indent:-9999px;display:block;right:0px;top:5px;pointer-events:none;}
+/*! CSS Used keyframes */
+@-webkit-keyframes gradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+@-moz-keyframes gradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+@keyframes gradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.edit_lable{
+  top: -30px !important;
+}

@@ -1,0 +1,88 @@
+
+span.error{
+    margin-left: 185px;
+    padding-top: 100px ;
+    color:  #004b6b ;
+    /* background-color: #007bff; */
+}
+
+/* Container lỗi */
+.error-container {
+    position: fixed;
+    top: 70px; 
+    right: 10px;
+    background-color: #ab1818; 
+    color: white; /* Chữ trắng */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.error-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.error-container li {
+    margin-bottom: 5px;
+}
+
+.error-container button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.alert {
+    position: fixed;
+    top: 20px; /* Cách mép trên 20px */
+    right: 20px; /* Cách mép phải 20px */
+    width: 300px; /* Độ rộng vừa phải */
+    padding: 15px; /* Khoảng cách bên trong */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng đẹp */
+    z-index: 1050; /* Hiển thị trên cùng */
+    animation: fadeIn 0.3s ease-in-out; /* Hiệu ứng xuất hiện */
+}
+
+.alert h4 {
+    margin: 0 0 10px; /* Khoảng cách giữa tiêu đề và nội dung */
+    font-size: 16px; /* Kích thước tiêu đề */
+}
+
+.alert .close {
+    position: absolute;
+    top: 10px; /* Vị trí nút đóng */
+    right: 10px;
+    font-size: 18px; /* Kích thước nút */
+    color: #000; /* Màu sắc */
+    opacity: 0.6; /* Độ trong suốt */
+    cursor: pointer;
+}
+
+.alert .close:hover {
+    opacity: 1; /* Tăng độ rõ khi hover */
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

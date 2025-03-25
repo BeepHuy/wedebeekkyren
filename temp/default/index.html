@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>kâ</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="mask_mbnav" id="anhienmenu"></div>
+      <header class="mb-3 border-bottom navbar-dark fixed-top topmenu">
+         <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between">
+               <button type="button" class="button_mb_nav-d d-md-none"  data-bs-toggle="collapse" data-bs-target="#anhienmenu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                     <line x1="3" y1="12" x2="21" y2="12"></line>
+                     <line x1="3" y1="6" x2="21" y2="6"></line>
+                     <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+               </button>
+               <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none col-6 logo_img_wrap">
+               <img src="http://wedebeek.com/upload/files/logo.png" alt="Logo" class="logo">
+               </a>
+               <div class="nav_u_profil me-4 pe-1">
+                  <div class="dropdown text-end d-lg-block m-auto col-1">
+                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                     </a>
+                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--nav class="navbar navbar-expand-md navbar-dark fixed-top topmenu">
+         <div class="container-fluid">
+            <img src="http://wedebeek.com/upload/files/logo.png" alt="Logo" class="logo">
+         </div>
+         
+         </!--nav-->
+      <main>
+         <!-- sidebar-->
+         <div class="sidebar_wrap"  id="anhienmenu">
+            <div class="d-flex flex-column sidebar_l">
+               <ul class="nav nav-pills flex-column mb-auto" >
+                  <li>
+                     <a href="#" class="nav-link link-dark" aria-current="page">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                           <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                           <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                           <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                           <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                           <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                           <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        <span class="text_slidebar_h">Dashboard</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                           <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span  class="text_slidebar_h">Offers</span>
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </a>
+                     <ul class="nav_sub">
+                        <li class="nav_sub-item">
+                           <a href="pages/charts/chartjs.html" class="nav_sub-link">
+                           <span>All</span>
+                           </a>
+                        </li>
+                        <li class="nav_sub-item">
+                           <a href="pages/charts/flot.html" class="nav_sub-link">
+                           <span>Available</span>
+                           </a>
+                        </li>
+                        <li class="nav_sub-item">
+                           <a href="pages/charts/inline.html" class="nav_sub-link">
+                           <span>Live</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <span class="text_slidebar_h">Smartlinks</span>
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                           <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                        <span class="text_slidebar_h">Statistics</span>
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                           <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                           <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                           <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                        <span class="text_slidebar_h">Payments</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                           <polyline points="14 2 14 8 20 8"></polyline>
+                           <line x1="16" y1="13" x2="8" y2="13"></line>
+                           <line x1="16" y1="17" x2="8" y2="17"></line>
+                           <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span class="text_slidebar_h">News</span>
+                     </a>
+                  </li>
+               </ul>
+               <footer class="side_footer">
+                  <ul class="nav nav-pills flex-column mb-auto">
+                     <li>
+                        <a href="#" class="nav-link link-dark" aria-current="page">
+                           <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-eqIVtm hepNiO">
+                              <polyline points="16 18 22 12 16 6"></polyline>
+                              <polyline points="8 6 2 12 8 18"></polyline>
+                           </svg>
+                           <span class="text_slidebar_h">API</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#" class="nav-link link-dark">
+                           <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                              <line x1="6" y1="1" x2="6" y2="4"></line>
+                              <line x1="10" y1="1" x2="10" y2="4"></line>
+                              <line x1="14" y1="1" x2="14" y2="4"></line>
+                           </svg>
+                           <span class="text_slidebar_h">Support</span>
+                        </a>
+                     </li>
+                  </ul>
+                  <div type="vertical" class="text_slidebar_h fpKbTN ">
+                     <div class="sc-cHGsZl gTcVFs">
+                        <a class="sc-TOsTZ caQhxZ" theme="[object Object]" href="/v2/privacy">Privacy Policy</a>
+                        <a class="sc-TOsTZ caQhxZ" theme="[object Object]" href="/v2/terms">Terms And Conditions</a>
+                     </div>
+                     <div class="sc-kgAjT ciQwaW"><span>Powered by</span>
+                        <a href="https://affise.com" target="_blank" rel="noopener noreferrer">Affise.com</a>
+                        <span>2021</span>
+                     </div>
+                     <div class="sc-cJSrbW cufxaP">
+                        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/solidqube-media-agency/">Our LinkedIn </a>
+                        <a rel="noreferrer" target="_blank" href="https://www.facebook.com/SolidQube-Media-Agency-101196415365742">Our Facebook</a>
+                     </div>
+                  </div>
+               </footer>
+            </div>
+         </div>
+         <!-- end sidebar-->
+         <div class="container-fluid  overflow-auto mx-2 mt-5">
+            <div class="row my-3 g-4 row-cols-lg-1 ">
+               <div class="col-xl-6 col-lg-12 vien">
+                  <div class="manager  db_info  py-2 px-4 d-flex flex-column align-content-between">
+                     <div class="row d-flex justify-content-between my-sm-3 pb-2">
+                        <div class="d-flex col-md-8 col-sm-12 lign-items-start">
+                           <div class="manager-avatar icon-square bg-light text-dark flex-shrink-0 me-3">
+                              <img src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/7/77/Pikachu.png/revision/latest/scale-to-width-down/340?cb=20170407192412" alt="" wdith="100%">
+                           </div>
+                           <div class="manager-info">
+                              <p class="mtp">Personal Manager</p>
+                              <p class="m-name">Daria Kova</p>
+                              <p class="email"><span>Email:</span> dariakova@solidqube.com</p>
+                              <p class="skype"><span>Skype:</span> live:.cid.cf561e23e4f9b05</p>
+                           </div>
+                        </div>
+                        <div class="d-flex flex-md-row-reverse  col-md-4 col-sm-12">
+                           <div class="text-start">
+                              Balance
+                              <div class="diem d-flex">
+                                 <span class="epoint">10,328</span>
+                                 <span class="ttusd align-self-center">
+                                    USD
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="T_-OwGeVQ2tvt69C7mvbY css-4k7dfu">
+                                       <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-3 balance" style="margin-top: auto;">
+                        <div class="col">
+                           <span>
+                           Balance
+                           </span>  
+                           <div class="blance_c">
+                              <div class="blan_usd">
+                                 USD 10,328
+                              </div>
+                              <div class="balan_eur">
+                                 EUR 0
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col">
+                           <span>
+                           Hold
+                           </span>  
+                           <div class="blance_c">
+                              <div class="blan_usd">
+                                 USD 10,328
+                              </div>
+                              <div class="balan_eur">
+                                 EUR 0
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col">
+                           <span>
+                           Available
+                           </span>  
+                           <div class="blance_c">
+                              <div class="blan_usd">
+                                 USD 10,328
+                              </div>
+                              <div class="balan_eur">
+                                 EUR 0
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-12 vien">
+                  <div class=" db_info  p-4 d-flex flex-column card-daily-static">
+                     <div class="col card-daily-s">
+                        <p class="card-daily-sname">Daily Statistics</p>
+                        <p class="card-daily-sdate mb-2">August 4, 2021</p>
+                     </div>
+                     <div class="col row text-center flex-grow-1">
+                        <div class="col-4 d-flex justify-content-center">
+                           <svg direction="down" width="15px" height="27px" viewBox="0 0 9 27" version="1.1" xmlns="http://www.w3.org/2000/svg" class="sc-jnlKLf muiten">
+                              <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                 <path direction="down" id="line" d="M5,0 L5,18 L9,18 L4.5,27 L-8.8817842e-16,18 L4,18 L4,0 L5,0 Z" fill-rule="nonzero" class="maumuiten"></path>
+                              </g>
+                           </svg>
+                           <div>
+                              <p class="card-daily-num">0</p>
+                              <p class="card-daily-num-type">Clicks</p>
+                           </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                           <svg direction="down" width="15px" height="27px" viewBox="0 0 9 27" version="1.1" xmlns="http://www.w3.org/2000/svg" class="sc-jnlKLf muiten">
+                              <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                 <path direction="down" id="line" d="M5,0 L5,18 L9,18 L4.5,27 L-8.8817842e-16,18 L4,18 L4,0 L5,0 Z" fill-rule="nonzero" class="maumuiten"></path>
+                              </g>
+                           </svg>
+                           <div>
+                              <p class="card-daily-num">0</p>
+                              <p class="card-daily-num-type">Hosts</p>
+                           </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                           <svg direction="down" width="15px" height="27px" viewBox="0 0 9 27" version="1.1" xmlns="http://www.w3.org/2000/svg" class="sc-jnlKLf muiten">
+                              <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                 <path direction="down" id="line" d="M5,0 L5,18 L9,18 L4.5,27 L-8.8817842e-16,18 L4,18 L4,0 L5,0 Z" fill-rule="nonzero" class="maumuiten"></path>
+                              </g>
+                           </svg>
+                           <div>
+                              <p class="card-daily-num">0</p>
+                              <p class="card-daily-num-type">Conversions</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header text-uppercase">
+                  Statistics for the last 10 days
+               </div>
+               <div class="card-body" >
+                  <!--chart-->
+                  <canvas id="myChart" width="400" height="90"></canvas>
+                  <div id="my-legend-con"></div>
+                  <!--End chart-->
+               </div>
+            </div>
+            <div class="card mt-3">
+               <div class="card-header text-uppercase">
+                  NEW OFFERS
+               </div>
+               <div class="card-body" >
+                  <!-- new offer contents-->
+                  <div class="card_newoffer">
+                     <div class="card_newoffer_ct">
+                        <div class="card_noffer_item">
+                           <div class="card_noffer_img"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1125/1026744417.200x200.png" alt="McAfee Antivirus - US - (CPS) (Creatives Pre-approval)"></div>
+                           <div class="card_noffer_title_box">
+                              <p class="card_noffer_title"><span class="card_noffer_title_txt">(1125)</span>McAfee Antivirus - US - (CPS) (Creatives Pre-approval)</p>
+                              <p class="card_noffer_points"><span>25</span><span>usd</span></p>
+                           </div>
+                           <div class="card_noffer_content_hv card_noffer_contents">
+                              <div class="card_noffer_content_wr">
+                                 <div class="card_noffer_content_slide">
+                                    <p><strong>Description:&nbsp;&nbsp;</strong>McAfee&nbsp;Total Protection</p>
+                                    <p><strong>Conversion Flow:</strong> <strong> </strong> Straight Sale</p>
+                                    <p><strong>Allowed Traffic Sources:</strong> Desktop only, Push, Pop, Display, Social, Search, Native, Media buying</p>
+                                    <p><strong>Restricted Traffic Sources:</strong> No Mobile, No Adult, No Bot, No Fraud, No Iframe, No Co-regs, No Cashback sites, No Fake Credit Cards, No Stolen Cards, No&nbsp;Email</p>
+                                    <p><strong>Browser</strong>: All&nbsp;</p>
+                                 </div>
+                                 <div><a class="btn btn-outline-primary btn-sm" href="#">Details</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card_noffer_item">
+                           <div class="card_noffer_img"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1124/462032742.200x200.png" alt="SweepsClub - US - (CPL) (SOI)"></div>
+                           <div class="card_noffer_title_box">
+                              <p class="card_noffer_title"><span class="card_noffer_title_txt">(1124)</span>SweepsClub - US - (CPL) (SOI)</p>
+                              <p class="card_noffer_points"><span>1.45</span><span>usd</span></p>
+                           </div>
+                           <div class="card_noffer_content_hv card_noffer_contents">
+                              <div class="card_noffer_content_wr">
+                                 <div class="card_noffer_content_slide">
+                                    <p><strong>Description: </strong> SweepsClub</p>
+                                    <p><strong>Conversion Flow:</strong> SOI</p>
+                                    <p><strong>Allowed Traffic Sources:</strong>&nbsp;Ads Icon Traffic, Discovery App Traffic, MediaBuyer Traffic,&nbsp;Network Syndication, Search Traffic, SMS Traffic, Mobile Application Traffic,&nbsp;Mobile Web Traffic, Email, Social Media Traffic, Push Notification Traffic, Pop-up / Pop-under</p>
+                                    <p><strong>Restricted Traffic Sources: </strong>No Incent, No Fraud, No Proxy, No Fake Info, No Adult</p>
+                                 </div>
+                                 <div><a class="btn btn-outline-primary btn-sm" href="#">Details</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card_noffer_item">
+                           <div class="card_noffer_img"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1123/3556831712.200x200.png" alt="Gutter Protector - US - (CPL) (SOI) (Creatives Pre-approval)"></div>
+                           <div class="card_noffer_title_box">
+                              <p class="card_noffer_title"><span class="card_noffer_title_txt">(1123)</span>Gutter Protector - US - (CPL) (SOI) (Creatives Pre-approval)</p>
+                              <p class="card_noffer_points"><span>38</span><span>usd</span></p>
+                           </div>
+                           <div class="card_noffer_content_hv card_noffer_contents">
+                              <div class="card_noffer_content_wr">
+                                 <div class="card_noffer_content_slide">
+                                    <p><strong>Description:&nbsp;</strong>&nbsp; Gutter Protector - Get a Free</p>
+                                    <p><strong>Conversion Flow:</strong>&nbsp; Valid form 1st page submit (SOI)</p>
+                                    <p><strong>Allowed Traffic Sources:</strong>&nbsp; Blog, Display, Email, Social Media</p>
+                                    <p><strong>Restricted Traffic Sources:</strong> <strong>&nbsp;</strong>No fraud, No incent, No fake info, No proxy, No adult</p>
+                                    <p><strong>Age targeting:</strong> 18+</p>
+                                 </div>
+                                 <div><a class="btn btn-outline-primary btn-sm" href="#">Details</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card_noffer_item">
+                           <div class="card_noffer_img"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1122/1500972973.200x200.png" alt="McAfee Antivirus - US - (CPS) (Creatives Pre-approval)"></div>
+                           <div class="card_noffer_title_box">
+                              <p class="card_noffer_title"><span class="card_noffer_title_txt">(1122)</span>McAfee Antivirus - US - (CPS) (Creatives Pre-approval)</p>
+                              <p class="card_noffer_points"><span>30</span><span>usd</span></p>
+                           </div>
+                           <div class="card_noffer_content_hv card_noffer_contents">
+                              <div class="card_noffer_content_wr">
+                                 <div class="card_noffer_content_slide">
+                                    <p><strong>Description:&nbsp;&nbsp;</strong>McAfee&nbsp;Total Protection</p>
+                                    <p><strong>Conversion Flow:</strong> <strong> </strong> Straight Sale</p>
+                                    <p><strong>Allowed Traffic Sources:</strong> Desktop only, Push, Pop, Display, Social, Search, Native, Media buying, Email</p>
+                                    <p><strong>Restricted Traffic Sources:</strong> No Mobile, No Adult, No Bot, No Fraud, No Iframe, No Co-regs, No Cashback sites, No Fake Credit Cards, No Stolen Cards</p>
+                                    <p><strong>Browser</strong>: All&nbsp;</p>
+                                 </div>
+                                 <div><a class="btn btn-outline-primary btn-sm" href="#">Details</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card_noffer_item">
+                           <div class="card_noffer_img"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1120/1081159283.200x200.png" alt="Videoslots - CA - DE - (CPL) (Direct)"></div>
+                           <div class="card_noffer_title_box">
+                              <p class="card_noffer_title"><span class="card_noffer_title_txt">(1120)</span>Videoslots - CA - DE - (CPL) (Direct)</p>
+                              <p class="card_noffer_points"><span>6.5</span><span>eur</span></p>
+                           </div>
+                           <div class="card_noffer_content_hv card_noffer_contents">
+                              <div class="card_noffer_content_wr">
+                                 <div class="card_noffer_content_slide">
+                                    <p><strong>Description: </strong>Videoslots</p>
+                                    <p><strong>Conversion Flow:&nbsp;</strong> Fill the registration form</p>
+                                    <p><strong>Allowed Traffic Sources: </strong>All traffic sources are allowed</p>
+                                    <p><strong>Restricted Traffic Sources:&nbsp;</strong> No Incentivized, No fraud, No adult, No proxy<br>
+                                       <br>
+                                       <strong>Age Targeting:</strong> 18+
+                                    </p>
+                                    <p>&nbsp;</p>
+                                 </div>
+                                 <div><a class="btn btn-outline-primary btn-sm" href="#">Details</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card_noffer_item">
+                           <div class="card_noffer_img"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1118/1006273357.200x200.png" alt="Samsung S20 - BE - (CPL) (SOI)"></div>
+                           <div class="card_noffer_title_box">
+                              <p class="card_noffer_title"><span class="card_noffer_title_txt">(1118)</span>Samsung S20 - BE - (CPL) (SOI)</p>
+                              <p class="card_noffer_points"><span>1.15</span><span>eur</span></p>
+                           </div>
+                           <div class="card_noffer_content_hv card_noffer_contents">
+                              <div class="card_noffer_content_wr">
+                                 <div class="card_noffer_content_slide">
+                                    <p><strong>Description: </strong> Win The Samsung S20</p>
+                                    <p><strong>Conversion Flow:</strong>&nbsp; SOI</p>
+                                    <p><strong>Allowed Traffic Sources:</strong>&nbsp; Web sites, Context AD, Brand Context AD, Teaser/banner AD, Social networks: targeted AD, Social networks: publics, games, applications, Email, Mobile traffic, ClickUnder/PopUnder</p>
+                                    <p><strong>Restricted Traffic Sources:</strong> <strong>&nbsp;</strong>&nbsp; No incent, No fraud, No fake info, No autosuscription, No Adult or Hardcore banners, No Rebrokering, No Doorways</p>
+                                 </div>
+                                 <div><a class="btn btn-outline-primary btn-sm" href="#">Details</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- new offer contents-->
+               </div>
+            </div>
+            <div class="card my-3">
+               <div class="card-header text-uppercase">
+                  TOP OFFERS
+               </div>
+               <div class="card-body" >
+                  top ofer
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- biểu đồ-->
+      <script src="js/chart.js"></script>
+      <script>
+         var ctx = document.getElementById('myChart');
+         var config = {
+             type: 'line',
+             data: {
+                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                 datasets: [{
+                     label: '# of Votes',
+                     data: [12, 19, 3, 5, 2, 3],
+                     backgroundColor: [
+                         'rgba(255, 99, 132, 0.2)',
+                         'rgba(54, 162, 235, 0.2)',
+                         'rgba(255, 206, 86, 0.2)',
+                         'rgba(75, 192, 192, 0.2)',
+                         'rgba(153, 102, 255, 0.2)',
+                         'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                         'rgba(255, 99, 132, 1)',
+                         'rgba(54, 162, 235, 1)',
+                         'rgba(255, 206, 86, 1)',
+                         'rgba(75, 192, 192, 1)',
+                         'rgba(153, 102, 255, 1)',
+                         'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1,
+                     tension: 0.4,
+                 }
+                 ,
+                 {
+                     label: '# of Votes2',
+                     data: [11, 12, 1, 15, 22, 3],
+                     backgroundColor: [
+                         'rgba(255, 99, 132, 0.2)',
+                         'rgba(54, 162, 235, 0.2)',
+                         'rgba(255, 206, 86, 0.2)',
+                         'rgba(75, 192, 192, 0.2)',
+                         'rgba(153, 102, 255, 0.2)',
+                         'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                         'rgba(255, 99, 132, 1)',
+                         'rgba(54, 162, 235, 1)',
+                         'rgba(255, 206, 86, 1)',
+                         'rgba(75, 192, 192, 1)',
+                         'rgba(153, 102, 255, 1)',
+                         'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1,
+                     tension: 0.4,
+                 }
+             ]
+             },
+             options: {
+                 interaction: {
+                     intersect: false,
+                     mode: 'index',
+                 },
+                 scales: {
+                     y: {
+                         beginAtZero: true
+                     }
+                 },
+                 plugins: {
+                     legend: {                        
+                         position : 'bottom',
+                         labels: {
+                                 usePointStyle: true,
+                                 pointStyle:"line"
+                         },
+                         
+                     }
+                 }
+             }
+         }
+         
+         
+         var myChart = new Chart(ctx, config);
+         
+      </script>
+   </body>
+</html>

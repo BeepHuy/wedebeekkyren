@@ -1,0 +1,242 @@
+
+<script src="<?php echo base_url();?>/temp/default/js/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/temp/default/css/jquery-ui.css"/>
+<script>
+	$(function() {	   
+        $( "#month-year" ).datepicker({
+            dateFormat: "mm-yy",
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,           
+            onClose: function(dateText, inst) { 
+                var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                $(this).datepicker('setDate', new Date(year, month, 1));
+            },
+            beforeShow : function(input, inst) {
+                var datestr;
+                if ((datestr = $(this).val()).length > 0) {
+                    year = datestr.substring(datestr.length-4, datestr.length);
+                    month = jQuery.inArray(datestr.substring(0, datestr.length-5), $(this).datepicker('option', 'monthNamesShort'));
+                    $(this).datepicker('option', 'defaultDate', new Date(year, month, 1));
+                    $(this).datepicker('setDate', new Date(year, month, 1));
+                }
+            }
+        });
+		//$( "#startdate" ).datepicker( "option", "dateFormat","yy-mm-dd");
+         
+	});
+	</script>
+
+<div class="row">
+    <div class="box col-md-12">
+        <div class="box-header">
+            <h2><i class="glyphicon glyphicon-globe"></i><span class="break"></span>Invoice</h2>
+            <div class="box-icon">
+                <a class="btn-setting" href="#"><i class="glyphicon glyphicon-wrench"></i></a>
+                <a class="btn-minimize" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                <a class="btn-close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+            </div>
+        </div>
+        <div class="box-content">
+            <div class="row">
+                <!--div class="col-md-3">
+                    <div class="form-group form-inline filter">                                                        
+                        <select title="<?php echo $this->uri->segment(3);?>" name="show_num" size="1" class="form-control input-sm">
+                       
+                        </select>
+                        <label>records per page</label>                                            
+                    </div>
+                </div-->
+
+                <?php $where=$this->session->userdata('dtsearch');?>
+                <div class="col-md-9">
+                   <form class="" role="form"  method="POST" action="<?php echo base_url($this->uri->segment(1).'/invoice/search');?>">
+                   <div class="form-group form-inline">    
+                        <label class="checkbox-inline">
+                        <input type="checkbox" name="Pending" value="1"  <?php if(!empty($where['Pending'])) echo ' checked ';?>> Pending
+                        </label>
+                        <label class="checkbox-inline">
+                        <input type="checkbox" name="Complete" value="1"  <?php if(!empty($where['Complete'])) echo ' checked ';?>> Complete
+                        </label>
+                        <label class="checkbox-inline">
+                        <input type="checkbox" name="Reverse" value="1" <?php if(!empty($where['Reverse'])) echo ' checked ';?>> Reverse
+                        </label>
+                        <input name="date" class="form-control input-sm" id="month-year" placeholder="Month-Year" value="<?php if(!empty($where['date'])) echo $where['date'];?>" />
+                        
+                        <input name="keycode" class="form-control input-sm" id="keys" placeholder="User's ID" <?php if($this->session->userdata('likedsearch')){echo 'value="'.$this->session->userdata('likedsearch').'"';}?> />
+                        <button class="btn btn-default btn-sm">Search</button>
+                    </div>
+                  </form>
+                </div>                                 
+                
+            </div>
+        
+            <hr/>
+            <!-------------END form creat invoice--------------->
+            <?php 
+            echo $this->session->userdata('thongbao');
+            $this->session->unset_userdata('thongbao');
+            
+            ?>  
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                    <th>Id</th>
+                    <th>User's Id</th>
+                    <th>Email</th>
+                    <th>Amount</th>
+                    <th>Note</th>
+                    <th>Status</th>                    
+                    <th>Date</th>
+                         
+                    </tr>
+                </thead>
+                <tbody>
+                <?php if(!empty($dulieu)){
+                    $tpending = $tapproved = $reverse = 0;                            
+                           foreach($dulieu as $dt){
+                            $dis=$status='';
+                            if($dt->status!='Pending'){$dis = 'disabled';}//chỉ trang thái pending là được enable button chuyển trạng thái
+                            
+                            if($dt->status=='Pending'){$status= '<span class="label label-warning">Pending</span>';$tpending +=$dt->amount;}
+                            if($dt->status=='Complete'){$status= '<span class="label label-success">Approved</span>';$tapproved +=$dt->amount;}                    
+                            if($dt->status=='Reverse'){$status= '<span class="label label-danger">Reverse</span>';$reverse +=$dt->amount;} 
+                            if($dt->method=='Bank Wire'){
+                                $ar = unserialize($dt->note);
+                                $note.= "<b>Name on Account".': </b>'.$ar['wire_name_on_card'].'<br/>';
+                                $note.= "<b>Address on Account".': </b>'.$ar['wire_address'].'<br/>';
+                                $note.= "<b>City on Account".': </b>'.$ar['wire_city'].'<br/>';
+                                $note.= "<b>State on Account".': </b>'.$ar['wire_state'].'<br/>';
+                                $note.= "<b>Zip on Account".': </b>'.$ar['wire_zip'].'<br/>';
+                                $note.= "<b>Bank Name".': </b>'.$ar['wire_bankname'].'<br/>';
+                                $note.= "<b>Bank Address".': </b>'.$ar['wire_bankaddress'].'<br/>';
+                                $note.= "<b>Bank Country".': </b>'.$ar['wire_country'].'<br/>';
+                                $note.= "<b>Account Number".': </b>'.$ar['wire_accountnum'].'<br/>';
+                                $note.= "<b>Swiftcode".': </b>'.$ar['wire_purpose'].'<br/>';
+                               
+                                
+                            }else{
+                                $note =$dt->note;
+                            }
+
+                            echo '
+                            <tr>
+                            <td>'.$dt->id.'</td>
+                            <td>'.$dt->usersid.'</td>
+                            <td>'.$dt->email.'</td>
+                            <td>'.$dt->amount.' $</td>
+                            <td>'.$note.'</td>
+                            <td>'.$status.'</td>                            
+                            <td>'.$dt->date.'</td>
+                            
+                          </tr>
+                            
+                            ';
+                        }
+                    }
+                ?>
+                    
+                </tbody>
+            </table>
+            <?php
+                echo "
+                <table class='table table-bordered'>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td>
+                        Complete                            
+                        <span class='label label-success'> $tapproved $</span>
+                    </td>
+                    <td>
+                        Pending                            
+                        <span class='label label-warning'> $tpending $</span>
+                    </td>
+                    <td>
+                        Reverse                            
+                        <span class='label label-danger'> $reverse $</span>
+                    </td>
+                    
+                </tr>
+                </table>
+                ";
+
+            ?>
+            <div class="row">
+                <!--div class="col-md-12">
+                    Showing 1 to 10 of 32 entries
+                </div--->
+                
+                <div class="col-md-6">
+                    <div style="margin:20px 0;float:left" class="form-group form-inline filter">
+                        <select title="<?php echo $this->uri->segment(3);?>" name="filter_cat" size="1" class="form-control input-sm">
+                            <option value="0">all</option>
+                            <?php 
+                                if(!empty($category)){
+                                    echo $fc;
+                                }
+                                ?>
+                        </select>
+                        <label></label>                                            
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class=" pagination">                       
+                        <?php echo $this->pagination->create_links();?>     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/span-->
+</div>
+<script>
+  $(document).ready(function(){
+      hinh = '<?php echo base_url();?>temp/manager/images/loading.gif';
+      diachi= '<?php echo base_url($this->uri->segment(1).'/'.'invoice/invoiPost');?>';
+      data = $( "#tao-invoice" );//
+      $('.tiv').click(function(){
+          //$('#tao-invoice').submit();        
+        data['amount'] = $('.amount').val();
+        data['note'] = $('.note').val();
+        data= data.serialize()+"&dk=taoinvoice";       
+          $.ajax({
+            type: "POST",
+            url: diachi,
+            data: data ,
+            success:success
+                    
+          });
+          return;
+      });
+      $('.xuly').click(function(){
+          
+          var dt = $(this).attr('data-a')+"&dk=doitrangthai";
+          id = $(this).attr('data-id'); 
+          $('.loading'+id).html('<img src="'+hinh+'"/>');
+        $.ajax({
+            type: "POST",
+            url: diachi,
+            data: dt ,
+            success:success
+                    
+          });
+      });
+      $('.xuly2').click(function(){
+          var dt = $(this).attr('data-a')+"&dk=xoa";
+        $('.xoad').html('<img src="'+hinh+'"/>');
+        $.ajax({
+            type: "POST",
+            url: diachi,
+            data: dt ,
+            success:success
+                    
+          });
+      })
+      return;
+  })
+  function success(){
+      location.reload();
+  }
+
+</script>

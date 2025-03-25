@@ -1,0 +1,256 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước */
+}
+
+:root {
+    --main-color: #555555;      /* Màu xám đen */
+    --secondary-color: #888888; /* Màu xám nhạt */
+    --border-color: #dcdcdc;
+    --background-color:  #f8f8f8; /* Màu nền xám siêu nhạt */
+}
+
+.form-container{
+    
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;       /* Sắp xếp nội dung theo cột */
+    justify-content: center;      /* Căn giữa dọc */
+    align-items: center;          /* Căn giữa ngang */
+    width: 100%;                  /* Chiếm hết chiều rộng */
+    max-width: 600px;             /* Giới hạn chiều rộng tối đa */
+    margin: 90px auto;               /* Căn giữa ngang trong viewport */
+    color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Khoảng cách giữa các hàng */
+    justify-content: space-between; /* Đẩy label và input ra hai bên */
+
+}
+
+label{
+    font-size: 15px;
+    text-align: left;
+    max-width: 150px;
+}
+
+input{
+    width: 350px;
+    height: 30px;
+    text-align: left;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    
+    padding: 10px;
+} 
+
+.title{
+    color: #004b6b;
+    font-weight: lighter;
+    font-size:large;
+    border-radius: 20px;
+    padding: 5px 30px;
+    margin-right: 80px;
+    background-color: var(--background-color);
+}
+
+.signup{
+    font-size:large;
+    color: var(--secondary-color);
+}
+
+.logo{
+    width: 300px; /* Đặt chiều rộng */
+    margin-bottom: 5px;
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+}
+
+.brand{
+    display: flex;
+    flex-direction: column; /* Xếp ảnh và span theo cột */
+    justify-content: center; /* Căn giữa dọc */
+    align-items: center; /* Căn giữa ngang */
+    text-align: center; /* Căn chữ trong span */
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    font-size:larger;
+    font-weight: lighter;
+}
+
+textarea{
+    width: 350px;
+    height: 50px;
+    text-align: left;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    margin-left: 30px;
+    resize: none; /* Vô hiệu hóa khả năng thay đổi kích thước */    
+    overflow: auto; /* Hiển thị thanh trượt khi nội dung vượt quá kích thước */
+    padding: 10px; /* Khoảng cách bên trong */
+    box-sizing: border-box; /* Tính kích thước đúng với padding và viền */
+}
+
+select {
+    width: 350px; /* Chiều rộng giống input */
+    height: 30px; /* Chiều cao giống input */
+    text-align: right; /* Văn bản bên phải */
+    border-radius: 20px; /* Góc bo tròn */
+    border: 2px solid var(--border-color); /* Viền */
+    margin-left: 30px; /* Khoảng cách bên trái */
+    padding: 0 10px; /* Khoảng cách bên trong để nội dung không chạm viền */
+
+}
+
+button {
+    background-color: #004b6b; /* Màu xanh đậm tương tự */
+    color: white; /* Màu chữ */
+    border: none; /* Loại bỏ viền */
+    border-radius: 20px; /* Bo góc */
+    padding: 10px 20px; /* Khoảng cách trong nút */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng hover */
+    margin-left: 180px;
+    margin-top: 15px;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #003a55; /* Đậm hơn khi hover */
+    transform: translateY(-2px); /* Nổi lên nhẹ khi hover */
+}
+
+.checkbox-item {
+    display: flex;
+    gap: 15px;
+    margin-left: 180px;
+    width: 350px;
+    margin-bottom: 10px; /* Thêm dòng này */
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0; /* Ngăn checkbox bị co lại */
+}
+
+.checkbox-item label {
+    font-size: 13px;
+    line-height: 1.4;
+    width: calc(100% - 31px); /* 31px = checkbox width (16px) + gap (15px) */
+    max-width: none; /* Ghi đè max-width: 150px từ label chung */
+}
+
+/* Bỏ các style không cần thiết */
+.checkbox-item div {
+    margin-left: 0; /* Bỏ margin này vì đã có margin ở parent */
+    display: flex;
+    align-items: center;
+}
+span.error{
+    margin-left: 185px;
+    padding-top: 100px ;
+    color:  #004b6b ;
+    /* background-color: #007bff; */
+}
+
+/* Container lỗi */
+.error-container {
+    position: fixed;
+    top: 70px; 
+    right: 10px;
+    background-color: #ab1818; 
+    color: white; /* Chữ trắng */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.error-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.error-container li {
+    margin-bottom: 5px;
+}
+
+.error-container button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.alert {
+    position: fixed;
+    top: 20px; /* Cách mép trên 20px */
+    right: 20px; /* Cách mép phải 20px */
+    width: 300px; /* Độ rộng vừa phải */
+    padding: 15px; /* Khoảng cách bên trong */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng đẹp */
+    z-index: 1050; /* Hiển thị trên cùng */
+    animation: fadeIn 0.3s ease-in-out; /* Hiệu ứng xuất hiện */
+}
+
+.alert h4 {
+    margin: 0 0 10px; /* Khoảng cách giữa tiêu đề và nội dung */
+    font-size: 16px; /* Kích thước tiêu đề */
+}
+
+.alert .close {
+    position: absolute;
+    top: 10px; /* Vị trí nút đóng */
+    right: 10px;
+    font-size: 18px; /* Kích thước nút */
+    color: #000; /* Màu sắc */
+    opacity: 0.6; /* Độ trong suốt */
+    cursor: pointer;
+}
+
+.alert .close:hover {
+    opacity: 1; /* Tăng độ rõ khi hover */
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.haveaccount{
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+.traffic {
+    width: 100%;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px 15px; /* gap dọc 8px, gap ngang 15px */
+    height: fit-content;
+}

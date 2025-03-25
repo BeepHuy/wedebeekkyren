@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Maintenance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #e74c3c;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Website is Under Maintenance</h1>
+        <p>We are currently performing scheduled maintenance to improve our services. Please check back soon.</p>
+        <p>Thank you for your patience!</p>
+        <p class="countdown" id="countdown"></p>
+    </div>
+
+    <script>
+        // === Get End Time from PHP ===
+        const countDownDate = <?php
+            date_default_timezone_set('UTC'); // Set timezone to UTC
+            $endTime = strtotime('2025-02-20 15:00:00'); // Set your server end time (UTC)
+            echo $endTime * 1000; // Convert to milliseconds
+        ?>;
+
+        const countdownElement = document.getElementById('countdown');
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            if (distance > 0) {
+                const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((distance / (1000 * 60)) % 60);
+                const seconds = Math.floor((distance / 1000) % 60);
+
+                countdownElement.textContent = `Time remaining: ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                countdownElement.textContent = 'Our website is now back online!';
+            }
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

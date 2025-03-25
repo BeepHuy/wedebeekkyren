@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>kâ</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/nhap.css" rel="stylesheet">
+   </head>
+   <body>
+      <header class="mb-3 border-bottom navbar-dark fixed-top topmenu">
+         <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+               <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+               <img src="http://wedebeek.com/upload/files/logo.png" alt="Logo" class="logo">
+               </a>
+               <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+               </ul>
+               <div class="dropdown text-end d-none d-lg-block">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                     <li><a class="dropdown-item" href="#">New project...</a></li>
+                     <li><a class="dropdown-item" href="#">Settings</a></li>
+                     <li><a class="dropdown-item" href="#">Profile</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--nav class="navbar navbar-expand-md navbar-dark fixed-top topmenu">
+         <div class="container-fluid">
+            <img src="http://wedebeek.com/upload/files/logo.png" alt="Logo" class="logo">
+         </div>
+         
+         </!--nav-->      
+      <main>
+          <!-- sidebar-->
+          <div class="d-flex flex-column sidebar_l d-none d-md-flex">
+            <ul class="nav nav-pills flex-column mb-auto" >
+               <li>
+                  <a href="#" class="nav-link link-dark" aria-current="page">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                     </svg>
+                     <span class="text_slidebar_h">Dashboard</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                     </svg>
+                     <span  class="text_slidebar_h">Offers</span>
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                     </svg>
+                     <span class="text_slidebar_h">Smartlinks</span>
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                     </svg>
+                     <span class="text_slidebar_h">Statistics</span>
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                     </svg>
+                     <span class="text_slidebar_h">Payments</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                     </svg>
+                     <span class="text_slidebar_h">News</span>
+                  </a>
+               </li>
+            </ul>
+            <footer class="side_footer">
+               <ul class="nav nav-pills flex-column mb-auto">
+                  <li>
+                     <a href="#" class="nav-link link-dark" aria-current="page">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-eqIVtm hepNiO">
+                           <polyline points="16 18 22 12 16 6"></polyline>
+                           <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        API
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                           <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                           <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                           <line x1="6" y1="1" x2="6" y2="4"></line>
+                           <line x1="10" y1="1" x2="10" y2="4"></line>
+                           <line x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                        Support
+                     </a>
+                  </li>
+               </ul>
+               <div type="vertical" class="sc-kjoXOD fpKbTN">
+                  <div class="sc-cHGsZl gTcVFs">
+                     <a class="sc-TOsTZ caQhxZ" theme="[object Object]" href="/v2/privacy">Privacy Policy</a>
+                     <a class="sc-TOsTZ caQhxZ" theme="[object Object]" href="/v2/terms">Terms And Conditions</a>
+                  </div>
+                  <div class="sc-kgAjT ciQwaW"><span>Powered by</span>
+                     <a href="https://affise.com" target="_blank" rel="noopener noreferrer">Affise.com</a>
+                     <span>2021</span>
+                  </div>
+                  <div class="sc-cJSrbW cufxaP">
+                     <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/solidqube-media-agency/">Our LinkedIn </a>
+                     <a rel="noreferrer" target="_blank" href="https://www.facebook.com/SolidQube-Media-Agency-101196415365742">Our Facebook</a>
+                  </div>
+               </div>
+            </footer>
+         </div>
+         <!-- end sidebar-->
+         <div class="container-fluid  overflow-auto mx-2 mt-5">
+            <!-- offer content-->
+            <div class="mt-5 mb-4">
+               
+                <div class="sc-dlyikq hrvHfq">
+                    <span class="_1ykwro3W9x7ktXduniR6Cp css-1didjui _2zZKiYIMOuyWJddFzI_uHV">Profile</span>
+                    <div class="_1haMCIeKQlOTIl_pWtBGbw _1ye-KTmlb5GAdCMzA76WiG">
+                       <div class="css-15tqd4u hfK7mk6VgJGa8JX5PvVeJ">
+                          <div class="_3eOZ58qg6Kp88DgJr1zNp_"><a class="jhqKpuaYZ1GgOhksjZsdK Q3IEaGfnj5AXv2b1luR2e css-l3h5dw" href="/v2/profile/profile" aria-current="page">Profile</a><a class="jhqKpuaYZ1GgOhksjZsdK" href="/v2/profile/security">Change password</a><a class="jhqKpuaYZ1GgOhksjZsdK" href="/v2/profile/api-key">Security</a><a class="jhqKpuaYZ1GgOhksjZsdK" href="/v2/profile/postbacks">Global postbacks</a><a class="jhqKpuaYZ1GgOhksjZsdK" href="/v2/profile/locale">Locale settings</a><a class="jhqKpuaYZ1GgOhksjZsdK" href="/v2/profile/payment">Payment system</a><span class="_1b3_OJUB-uV7MrVQ8Fvjvx" style="left: 0px; width: 66px;"></span></div>
+                       </div>
+                       <div class="_3vMlZCRTDMcko6fQUVb1Uf css-1qvl0ud css-y2hsyn">
+                          <form class="sc-jQMNup hiJcSc">
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Email</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-p91yxg">
+                                   <input disabled="" placeholder="Email" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="biphan@wedebeek.com">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                      <polyline points="22,6 12,13 2,6"></polyline>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Сompany name/login</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-p91yxg">
+                                   <input disabled="" placeholder="Login" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="Wedebeek.com">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                      <circle cx="12" cy="7" r="4"></circle>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE">First Name</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-1vr8bhw">
+                                   <input maxlength="255" placeholder="First Name" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="Bi">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE">Last Name</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-1vr8bhw">
+                                   <input maxlength="255" placeholder="Last Name" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="Phan">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE">Address (Street, City, Country, State/Region, Zipcode) :</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-1vr8bhw">
+                                   <input maxlength="255" placeholder="Address (Street, City, Country, State/Region, Zipcode) :" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="174 Chau Thi Vinh Te, My An, Ngu Hanh Son">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE">Skype ID/Telegram</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-1vr8bhw">
+                                   <input maxlength="255" placeholder="Skype ID/Telegram" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="live:.cid.dc3f3f4d372582ea">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE">What offers are you looking for? Please mention GEOs and Verticals.</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-1vr8bhw">
+                                   <input maxlength="255" placeholder="What offers are you looking for? Please mention GEOs and Verticals." type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="McAfee Antirus. US,CA,UK,AU.">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE"><span>Please choose your traffic type:</span><span class="sc-hlILIN kDoghg">*</span></p>
+                                <div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="5te895egc6c" id="5te895egc6c" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="5te895egc6c"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Email</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="3qib9hbqnfjg" id="3qib9hbqnfjg" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="3qib9hbqnfjg"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Display Ads / Banner</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="5flm1g2aiee" id="5flm1g2aiee" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="5flm1g2aiee"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Push / Pop</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="836u7ilhdjq" id="836u7ilhdjq" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="836u7ilhdjq"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Google AdWords / BingAds</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="69nhndqa7n1" id="69nhndqa7n1" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="69nhndqa7n1"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Social Media</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="1rcn2ntem6h" id="1rcn2ntem6h" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="1rcn2ntem6h"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">SEO, SEM, SMO</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="73qkrmhhrah" id="73qkrmhhrah"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="73qkrmhhrah"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Personal Blog / website</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="68c1gaj56uu" id="68c1gaj56uu" checked=""><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="68c1gaj56uu"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Mobile traffic</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="5mvk6lb44sd" id="5mvk6lb44sd"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="5mvk6lb44sd"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Incent</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="7t0n6201msc" id="7t0n6201msc"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="7t0n6201msc"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Media buying</span></label></div>
+                                   <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi"><input class="" type="checkbox" name="92c7fp622ni" id="92c7fp622ni"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="92c7fp622ni"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Other</span></label></div>
+                                </div>
+                             </div>
+                             <div class="sc-ccLTTT cjuVOD">
+                                <p class="sc-hARARD cKOZpE"><span>How did you find us?</span><span class="sc-hlILIN kDoghg">*</span></p>
+                                <div class="_2pOF-T29kOhb_V7rdJc7lm">
+                                   <div class="_19C74tkRgpO1m06ZW7AnB1">
+                                      <div class="_2OwLpj9TZ-8y_zCUI9GiK5">
+                                         <div class="_3XLJyNAzVNxxfc02Pjj2fW">
+                                            <span class="_3aNWr-_oGR2IfWm2Dgv-87">Recommendation</span>
+                                            <div class="_2MwchzF2ZswCEBEcL8RjRk"></div>
+                                         </div>
+                                      </div>
+                                      <div class="hwGe6ChZS1mygU7IkVQkN ueyjmSYC7EYpmNEMn2w2M">
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_6FF2NYn2DKbXwyhEkUyVK">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                         </svg>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Name/contact person</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="Name" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                      <circle cx="12" cy="7" r="4"></circle>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Address 1</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="Address 1" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Address 2</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="Address 2" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">City</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="City" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Country</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="Country" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="VN">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Zip Code</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="Zip Code" type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                      <polyline points="22,6 12,13 2,6"></polyline>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div>
+                                <p class="sc-bJHhxl gXRQqD">Tel.</p>
+                                <div class="_3WCfA5WYRlXEJAXoSGLCJM css-gd4v6g">
+                                   <input placeholder="Tel." type="text" class="_1Yox25pgA6Bt9-R0uIDpcS _2U8LClDsGTjhEIQtswl0q7 _2WJImvbnE8I3_hccXYSMQ css-4s204c" value="">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_2ZTo9--SzlVupN_LAvBNdo css-gyuu5p">
+                                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                   </svg>
+                                </div>
+                             </div>
+                             <div class="sc-TuwoP gOhHft">
+                                <button type="submit" class="K3TX2EnGEDIGIEiEIo_0X _3-Xcfgk4YnBeM0kgvmZfs_">
+                                   <div class="_3kiCWIsiMrRqCXneU8Asq6" style="height: 0px; width: 0px; left: 0px; top: 0px;"></div>
+                                   <span class="_1pFgCebzxXEI3gItBe_863">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                                         <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                         <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                      </svg>
+                                   </span>
+                                   <span class="_3axrJUuPR6Tfk-J1aQF4dm">Save</span>
+                                </button>
+                             </div>
+                          </form>
+                       </div>
+                    </div>
+                 </div>
+               
+            </div>
+            <!-- endoffer content-->
+         </div>
+      </main>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- biểu đồ-->
+      <script src="js/chart.js"></script>
+      <script>
+         var ctx = document.getElementById('myChart');
+         var config = {
+             type: 'line',
+             data: {
+                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                 datasets: [{
+                     label: '# of Votes',
+                     data: [12, 19, 3, 5, 2, 3],
+                     backgroundColor: [
+                         'rgba(255, 99, 132, 0.2)',
+                         'rgba(54, 162, 235, 0.2)',
+                         'rgba(255, 206, 86, 0.2)',
+                         'rgba(75, 192, 192, 0.2)',
+                         'rgba(153, 102, 255, 0.2)',
+                         'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                         'rgba(255, 99, 132, 1)',
+                         'rgba(54, 162, 235, 1)',
+                         'rgba(255, 206, 86, 1)',
+                         'rgba(75, 192, 192, 1)',
+                         'rgba(153, 102, 255, 1)',
+                         'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1,
+                     tension: 0.4,
+                 }
+                 ,
+                 {
+                     label: '# of Votes2',
+                     data: [11, 12, 1, 15, 22, 3],
+                     backgroundColor: [
+                         'rgba(255, 99, 132, 0.2)',
+                         'rgba(54, 162, 235, 0.2)',
+                         'rgba(255, 206, 86, 0.2)',
+                         'rgba(75, 192, 192, 0.2)',
+                         'rgba(153, 102, 255, 0.2)',
+                         'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                         'rgba(255, 99, 132, 1)',
+                         'rgba(54, 162, 235, 1)',
+                         'rgba(255, 206, 86, 1)',
+                         'rgba(75, 192, 192, 1)',
+                         'rgba(153, 102, 255, 1)',
+                         'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1,
+                     tension: 0.4,
+                 }
+             ]
+             },
+             options: {
+                 interaction: {
+                     intersect: false,
+                     mode: 'index',
+                 },
+                 scales: {
+                     y: {
+                         beginAtZero: true
+                     }
+                 },
+                 plugins: {
+                     legend: {                        
+                         position : 'bottom',
+                         labels: {
+                                 usePointStyle: true,
+                                 pointStyle:"line"
+                         },
+                         
+                     }
+                 }
+             }
+         }
+         
+         
+         var myChart = new Chart(ctx, config);
+         
+      </script>
+   </body>
+</html>

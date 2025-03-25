@@ -1,0 +1,122 @@
+a:14:{s:8:"activate";s:1:"1";s:6:"minpay";s:3:"200";s:8:"sitename";s:8:"WedeBeek";s:10:"emailadmin";s:19:"Biphan@wedebeek.com";s:4:"logo";s:73:"https://wedebeek.com/upload/files/website_logo_transparent_background.png";s:9:"termsinfo";s:12548:"TERMS AND CONDITIONS<br>
+This agreement (“Agreement”), is made the (“Effective Date”) between (“Advertiser”), with offices at Wedebeek Technology (“Client”), with 
+offices 174 Chau Thi Vinh Te, My an, Ngu hanh son, Da nang. In consideration of the premises and promises set forth herein, and Client 
+hereby agree as follows: <br>
+I. ACCEPT AND REJECT CONVERSIONS<br>
+(A) Pause/Change notifications should be sent by email 48 hours in advance.<br>
+(B) Conversions/Leads/Installs are based on Advertiser's Statistics. In case of incongruity, both parties shall settle this amicably and most 
+accurately by date, time, ips and conversion id.<br>
+(C) Wedebeek will charge advertisers based on valid conversions and will be disapproved on invalid conversions.
+In case of Conversions/Leads/Installs’ rejection, Advertiser shall provide reason(s) for rejection and provide with detailed sub_id report of 
+users who were rejected within 5 days of the end of the bill period, otherwise
+Conversions/Leads/Installs are considered valid.
+Reports of traffic denials need to be sent with specific report details: ( IPs, Date, Customers information, sub_id, Reason). If you are unable 
+to submit the specific report we request, you must accept the conversions within 5 business days.<br>
+(D) If the advertiser hasn't sent the final confirmed number by the due date, all numbers must be accepted unconditionally after 5 business 
+days.
+Advertisers are responsible for paying on time commitment from before signing this contract. Wedebeek will charge for late payment cases 
+1% of the total bill amount per day.
+In case the advertiser does not pay or does not follow what has been signed in this contract, he must bear all costs of damage and be 
+responsible before the law in the locality where the advertiser registers business as well as at international legal authority.<br>
+II. PAYMENT<br>
+(A) Advertisers have the right to add or modify the following agreements to better suit the interests of both parties. After agreeing to sign an 
+agreement, any party that does not comply with IO will accept the penalty according to the provisions of law in the cybersecurity alliance of 
+Vietnam and of the two countries, the case cannot be resolved, dispute will be resolved by the global community of continents and 
+compensated in accordance with the International law.<br>
+(B) Advertisers are responsible for providing all data related to potential customers submitted by affiliates in the event of a dispute for faster, 
+clearer dispute resolution. All allegations made by advertisers must be well-founded, based on specific and accurate reports. All verbal 
+accusations or messages without specific reports are believed to be baseless and do not work to deduct money from affiliates.<br>
+(C) All disputes must be made within 5 business days at most. If after 5 days from the date of the dispute arose (the date of the final confirmation 
+number) if the advertiser is still unable to produce reports evidencing the denial allegation against the pubs, all figures must be unconditional 
+consent. After that, payment must be made as committed by both parties<br>
+(D) Confirm Date and Pay Date:<br>
+Confirmation numbers and payments from advertisers must be made on time to our request from time to time as follows:<br>
++ For net30 payment needs to confirm last month numbers no later than the 10th
+- 15th of following month. Pay date: 30th<br>
+.
++ For Net15 payments, confirm last month numbers must be provided by the 7
+th – 10th of the following month. Pay date: 15th<br>
+.
++ For Bi-weekly payment need to confirm number in a following week working from weekend of conversions made. Pay date: 3
+rd week.<br>
++ For weekly payment need to confirm numbers no later than Tuesday of the following week and payment will be paid on Friday or Saturday 
+at the latest.<br>
+III. NO ASSIGNMENT OR RESALE OF AGREEMENT<br>
+Neither party may assign its rights or obligations under this Agreement without written consent from the other party, which shall not be 
+unreasonably withheld or delayed; provided, however, nothing shall prevent either party from assigning its rights or obligations hereunder to a 
+successor in ownership in connection with any merger, consolidation, or sale of substantially all of the assets of the business of the assigning 
+party, or any other transaction in which ownership of more than fifty percent (50%) of the assigning party’s voting securities is transferred. <br>
+IV. NO OTHER WARRANTIES<br>
+Except as expressly provided in this agreement, media partner makes no warranty whatsoever, express or implied, as to the products, services, 
+and/or information provided hereunder. Client understands and agrees that any information provided hereunder represents self-reported 
+information from individual consumers, and is provided on an as-is basis. Media partner makes no warranty as to whether client will realize 
+any profit or receive any payment as a result of the sales provided. Media partner disclaims any warranties that could be implied in contract, 
+in law, or in equity, including without limitation, any implied warranty of merchantability, fitness for a particular purpose, quality, accuracy, 
+completeness, reliability, or performance, or arising from usage of trade, course of dealing, or course of performance.<br>
+V. LIMITATION OF LIABILITY<br>
+In no event shall media partner be liable for any special, indirect, incidental, consequential, punitive, or exemplary loss, damage, or expense 
+in connection with this agreement, including, without limitation, damages relating to loss of profits, income, or goodwill, even if client is aware 
+of the possibility of damages. In no event shall media partner liability (whether in contract, tort, or otherwise) for monetary damages under this 
+agreement exceed the fees paid by client to media partner hereunder. <br>
+VI. INDEMNIFICATION<br>
+(A) Client agrees to indemnify, defend, and hold harmless Media Partner and its officers, directors, employees, representatives, agents, 
+subsidiaries, and affiliates, from and against any and all third party claims, actions, liabilities (including all reasonable costs, expenses, and 
+attorneys' fees) arising from or in connection with (1) any claim that Client’s use of the Sales or Related Information violates any law or privacy 
+or publicity right, intellectual property right, or any other right; (2) the products, services, and/or 
+counsel provided by Client to its customers and/or an Media Partner Sale; (3) any communications by Client to individuals to which the 
+information in any Sale pertains, or (4) Client’s breach of any of its obligations, representations, or warranties under this Agreement. Media 
+Partner shall promptly notify Client in writing of all such claims and shall accommodate Client’s reasonable requests for cooperation and 
+information. Media Partner shall agree to Client’s sole control over the defense and any settlement of such claims; provided, however, that 
+Client shall not agree to any settlement that could adversely affect the rights or interest of Media Partner without the express written consent 
+of Media Partner.<br>
+(B) Media Partner agrees to indemnify, defend, and hold harmless Client and its officers, directors, employees, representatives, agents, 
+subsidiaries, and affiliates, from and against any and all third party claims, actions, liabilities (including all reasonable costs, expenses, and 
+attorneys' fees) arising from or in connection with (1) any claim that the products and/or services provided by Media Partner hereunder violate 
+any law or privacy or publicity right, intellectual property right, or any other right, except to the extent that such claim is based on any action or 
+omission of Client; or (2) Media Partner breach of any of its obligations, representations, or warranties under this Agreement. Client shall 
+promptly notify Media Partner in writing of all such claims and shall accommodate Media Partner reasonable requests for cooperation and 
+information. Client shall agree to Media Partner sole control over the defense and any settlement of such claims; provided, however, that 
+Media Partner shall not agree to any settlement that could adversely affect the rights or interest of Client without the express written consent 
+of Client.<br>
+VII. AUTHORITY<br>
+Media Partner and Client each represent and warrant to the other party that (a) such party has the full corporate power and authority to enter 
+into this Agreement, to grant the licenses granted hereunder and to perform the acts required of it hereunder, and (b) this Agreement constitutes 
+the legal, valid and binding obligation of such party, enforceable against it in accordance with its terms, except as such may be limited by 
+4
+applicable bankruptcy, insolvency, reorganization, moratorium or other similar law affecting the enforcement of creditors’ rights generally and 
+except as may be limited by federal principles of equity.<br>
+VIII. AGENCY<br>
+If an agency signs the Agreement, it does so as Client’s agent, and Client and agency will be jointly and severally liable for all obligations 
+hereunder. Agency represents that it has full authority to act on Client’s behalf, provided, however, that nothing herein will release Client or 
+agency from any obligation or liability hereunder, and Media Partner may look to Client or agency for performance of all obligations under this 
+Agreement.
+X. FORCE MAJEURE <br>
+Neither party shall be liable for delays or nonperformance of this Agreement if such delay or nonperformance was caused by: (a) act of God, 
+act of war, strike, fire, natural disaster, or accident; (b) lack of availability of materials, fuel, or utilities; or (c) any other cause beyond such 
+party’s control.
+XI. CONFIDENTIAL INFORMATION<br>
+For a period of three (5) years, beginning on the Effective Date, each party will keep strictly confidential all Confidential Information disclosed 
+by the other party, except to the extent an applicable governmental law, order, decree, regulation, rule, or process requires disclosure. In the 
+event of such required disclosure, the receiving party shall provide written notice thereof to the disclosing party as soon as reasonably possible, 
+and shall reasonably cooperate with the disclosing party in resisting the disclosure of or obtaining confidential treatment for such Confidential 
+Information.<br>
+XII. MISCELLANEOUS<br>
+This Agreement and all applicable IOs : (i) shall be governed by and construed in accordance with the laws of Viet Nam, without giving effect 
+to principles of conflicts of law, and the parties consent to the exclusive jurisdiction of the courts of Amsterdam; (ii) may be amended only by 
+a written agreement executed by an authorized representative of each party; (iii) constitute the complete and entire expression of the 
+agreement between the parties, and shall supersede any and all other agreements, whether written or oral, between the parties. In the event 
+that any provision of this Agreement shall for any reason be held to be invalid, illegal or unenforceable in any respect, the remaining provisions 
+shall remain in full force and effect. All notices, demands and other communications hereunder must be in writing or by written 
+telecommunications and will be deemed to have been duly given (a) if mailed by certified mail, postage prepaid, on the date three days from 
+the date of mailing, (b) if delivered by overnight courier, when received by the addressee or if sent by confirmed telecommunication, one 
+business day following receipt by the addressee at the addresses set forth on the Agreement, or such other address as either party may 
+specify in writing.
+By signing, Media Partner acknowledges and affirms that Media Partner has read, understands and agrees to the provisions of this Agreement, 
+including the terms of the applicable IO and any Addendum(a) attached hereto, all of which are made a part hereof and together shall comprise 
+the entire Agreement between Client and Media Partner. In the event of a conflict between these Terms and Conditions and any other 
+attachment or other document (including Addenda and IOs) these Terms and Conditions shall govern.<br>
+XIII. TRAFFIC SOURCES<br>
+Please note that the following traffic sources are not allowed under any circumstances on Wedebeek offers.
+• Iframe
+• Autosubscription 
+If Found by Wedebeek, all made sales will be indemnified and will not be paid out to partner.";s:4:"rate";d:0.01;s:9:"indexpage";s:1:"1";s:15:"reg_success_pub";s:162:"You have successfully registered!. please active your email address.If you don't see the verification email in your inbox, please check your Junk or Spam folders.";s:15:"reg_success_adv";s:72:"Thanks for your submission, we will contact you for further information.";s:7:"log_adv";s:91:"Your submission has been completed, please allow 3-5 businesses days for processing. Thanks";s:12:"acc_pendding";s:80:"your account is currently processing, please allow 3-5 business days to respond.";s:10:"acc_banned";s:88:"your account has been suspended. Contact your affiliate manager for further informations";s:9:"acc_pause";s:85:"your account has been paused. Contact your affiliate manager for further informations";}

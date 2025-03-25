@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>kâ</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <header class="mb-3 border-bottom navbar-dark fixed-top topmenu">
+         <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+               <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+               <img src="http://wedebeek.com/upload/files/logo.png" alt="Logo" class="logo">
+               </a>
+               <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+               </ul>
+               <div class="dropdown text-end d-none d-lg-block">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                     <li><a class="dropdown-item" href="#">New project...</a></li>
+                     <li><a class="dropdown-item" href="#">Settings</a></li>
+                     <li><a class="dropdown-item" href="#">Profile</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--nav class="navbar navbar-expand-md navbar-dark fixed-top topmenu">
+         <div class="container-fluid">
+            <img src="http://wedebeek.com/upload/files/logo.png" alt="Logo" class="logo">
+         </div>
+         
+         </!--nav-->      
+      <main>
+          <!-- sidebar-->
+          <div class="d-flex flex-column sidebar_l d-none d-md-flex">
+            <ul class="nav nav-pills flex-column mb-auto" >
+               <li>
+                  <a href="#" class="nav-link link-dark" aria-current="page">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                     </svg>
+                     <span class="text_slidebar_h">Dashboard</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                     </svg>
+                     <span  class="text_slidebar_h">Offers</span>
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                     </svg>
+                     <span class="text_slidebar_h">Smartlinks</span>
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" active="[object Object]" class="sc-dxgOiQ goeaVQ">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                     </svg>
+                     <span class="text_slidebar_h">Statistics</span>
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" colors="[object Object]" shadows="[object Object]" name="white" type="vertical" active="[object Object]" class="arrow_menu text_slidebar_h">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                     </svg>
+                     <span class="text_slidebar_h">Payments</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link link-dark">
+                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                     </svg>
+                     <span class="text_slidebar_h">News</span>
+                  </a>
+               </li>
+            </ul>
+            <footer class="side_footer">
+               <ul class="nav nav-pills flex-column mb-auto">
+                  <li>
+                     <a href="#" class="nav-link link-dark" aria-current="page">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-eqIVtm hepNiO">
+                           <polyline points="16 18 22 12 16 6"></polyline>
+                           <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        API
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-link link-dark">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hSdWYo Zttnf">
+                           <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                           <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                           <line x1="6" y1="1" x2="6" y2="4"></line>
+                           <line x1="10" y1="1" x2="10" y2="4"></line>
+                           <line x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                        Support
+                     </a>
+                  </li>
+               </ul>
+               <div type="vertical" class="sc-kjoXOD fpKbTN">
+                  <div class="sc-cHGsZl gTcVFs">
+                     <a class="sc-TOsTZ caQhxZ" theme="[object Object]" href="/v2/privacy">Privacy Policy</a>
+                     <a class="sc-TOsTZ caQhxZ" theme="[object Object]" href="/v2/terms">Terms And Conditions</a>
+                  </div>
+                  <div class="sc-kgAjT ciQwaW"><span>Powered by</span>
+                     <a href="https://affise.com" target="_blank" rel="noopener noreferrer">Affise.com</a>
+                     <span>2021</span>
+                  </div>
+                  <div class="sc-cJSrbW cufxaP">
+                     <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/solidqube-media-agency/">Our LinkedIn </a>
+                     <a rel="noreferrer" target="_blank" href="https://www.facebook.com/SolidQube-Media-Agency-101196415365742">Our Facebook</a>
+                  </div>
+               </div>
+            </footer>
+         </div>
+         <!-- end sidebar-->
+         <div class="container-fluid  overflow-auto mx-2 mt-5">
+            <!-- offer content-->
+            <div class="mt-5 mb-2">
+               <span class="offer-view-title">IPhone Gift Card - UK - (CPL) (SOI)</span>
+               
+            </div>
+            <div class="card">
+               <div class="card-body" >
+                  <div class="row campaign-views">
+
+                     <div class="col-lg-7 ps-md-3 pe-md-4 vcampaign_left">
+                        <div class="vcampaign_left_h d-flex flex-column">
+                           <div class="d-flex justify-content-between">
+                              <div class="vcampaign_left_hl">
+                                 <p class="vcampaign_left_information">Offer information</p>
+                                 <a target="_blank" href="" class="prv_link">
+                                    <button type="button" class="btn_prv_link btn_prv_link_2">
+                                       <div class="btn_prv_link_2_child" style="height: 0px; width: 0px; left: 0px; top: 0px;"></div>
+                                       <span class="btn_prv_link_2_child2">Offer preview</span>
+                                    </button>
+                                 </a>
+                                 <div class="sc-frDJqD sc-gbOuXE ljzHPa">
+                                    <p><strong>Description: </strong> Win The iPhone Gift Card</p>
+                                    <p><strong>Conversion Flow:</strong>&nbsp; SOI</p>
+                                    <p><strong>Allowed Traffic Sources:</strong>&nbsp; Display, Email, Push, Native, Contextual, Social</p>
+                                    <p><strong>Restricted Traffic Sources:</strong> <strong>&nbsp;</strong>&nbsp; No incent, No fraud, No fake info, No autosuscription, No Adult or Hardcore banners, No Rebrokering, No Doorways, No Click-Under/Pop-Under, No In-App, No Content Lock, No SMS</p>
+                                    <p><strong>Age targeting:</strong> 18+</p>
+                                 </div>
+                              </div>
+                              <div class="sc-ktHwxA sc-cTjmhe ebomDJ"><img src="https://affise-media-service-prod.s3.eu-central-1.amazonaws.com/affise-media-service-prod/offers/5234/1185/3192404733.200x200.png" alt="iPhone Gift Card - UK - (CPL) (SOI)"></div>
+                           </div>
+                        </div>
+                        
+                        <!--- approved-->
+                        <div class="row track_link_info">
+                           <div class="track_link">
+                              <div class="track_link_label d-flex justify-content-between mt-3">
+                                 <p class="vcampaign_left_information">Tracking link</p>
+                                 <a target="_blank" style="color:rgb(131, 131, 131)" href="https://affise.zendesk.com/hc/en-us/sections/201683795">Trackers integration</a>
+                              </div>
+                              <div class="input-group mb-3">
+                                 <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                 </span>
+                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                 <span class="input-group-text"> SSL </span>
+                               </div>
+                           </div>
+                           
+                           <div class="mb-1 col-4 track_subid">
+                              <label class="form-label">Sub 1</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-1 col-4 track_subid">
+                              <label class="form-label">Sub 2</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-1 col-4 track_subid">
+                              <label class="form-label">Sub 3</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-1 col-4 track_subid">
+                              <label class="form-label">Sub 4</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-1 col-4 track_subid">
+                              <label class="form-label">Sub 5</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-1 col-4 track_subid">
+                              <label class="form-label">Sub 6</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            
+                            
+
+
+                        
+                        </div>
+                        <!--end approved--->                        
+
+                        <!-- requesst approved-->
+                        <div class="mt-3">
+                           <form class="form-rq">
+                              <textarea placeholder="To receive approval at the nearest time, please provide a full traffic description to your manager. "></textarea>
+                              <div class="d-flex justify-content-between align-items-end mt-2">
+                                 <div></div>
+                                 <div class="d-flex align-items-center">
+                                    <span class="rqqqq">No less than 5 characters are required</span>
+                                    <button disabled="" type="submit" class="btn_prv_link btn_prv_link_2">
+                                       <div class="btn_prv_link_2_child" style="height: 0px; width: 0px; left: 0px; top: 0px;"></div>
+                                       <span class="btn_prv_link_2_child_span">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                                             <line x1="12" y1="5" x2="12" y2="19"></line>
+                                             <line x1="5" y1="12" x2="19" y2="12"></line>
+                                          </svg>
+                                       </span>
+                                       <span class="btn_prv_link_2_child2">Apply</span>
+                                    </button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <!-- End requesst approved-->
+                        
+                        <!--sau requesst-->
+                        <div class="sc-iYUSvU jInYWN">
+                           <p>Ticket already exists. You can know status at Support page</p>
+                        </div>
+                        <!--end asu reqeusst-->
+
+                     </div>
+
+                     <div class="col-lg-5 EnqEY">
+                        <div class="sc-fnwBNb iCueaH">
+                           <p class="sc-iNhVCk gmVVGK">Geography and paid goals</p>
+                           <div class="sc-eXNvrr gDsdmm">
+                              <div class="sc-cpmKsF jRKgwY">
+                                 <div class="d-flex flag_detail_of">
+                                    <div class="d-flex align-items-center">
+                                       <img class="icon-flag-cpview" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/gb.svg" style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;">
+                                       <span class="sc-gVyKpa bbnMFd">GB</span>
+                                    </div>                        
+                                 </div>
+                                 <div class="d-flex flag_detail_of">
+                                    <div class="d-flex align-items-center">
+                                       <img class="icon-flag-cpview" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/gb.svg" style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;">
+                                       <span class="sc-gVyKpa bbnMFd">GB</span>
+                                    </div>                        
+                                 </div>
+                              </div>
+                              <div class="sc-cpmKsF sc-jrIrqw iWDZfO"><span>3.1</span><span>USD</span></div>
+                              <div class="sc-cpmKsF jRKgwY"><span>desktop</span><span>mobile</span></div>
+                              <div class="sc-cpmKsF jRKgwY"><span>All OS</span></div>
+                           </div>
+                        </div>
+                        <div class="sc-fnwBNb iCueaH">
+                           <p class="sc-iNhVCk gmVVGK">Conversion rates</p>
+                           <div class="sc-drMfKT bOjCqL">
+                              <div class="sc-fgfRvd dpjZSr"><span>Click Session Lifespan</span></div>
+                              <span>1y</span>
+                              <p data-tip="Click Session Lifespan is time period when conversion is allowed for click. (Format: y(year), m(month), w(week), d(day), h(hour), i(minute), s(second))" currentitem="false">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-hIVACf keLknU">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                 </svg>
+                              </p>
+                             
+                           </div>
+                        </div>
+                        <div class="sc-fnwBNb iCueaH">
+                           <p class="sc-iNhVCk gmVVGK">Limits</p>
+                           <div class="sc-ugnQR hWFfaR">
+                              <div class="sc-eIHaNI eVOlRG">Day</div>
+                              <div class="sc-eIHaNI sc-eTpRJs cQUeis">Conversions</div>
+                              <div class="sc-eIHaNI eVOlRG">30</div>
+                              <div class="sc-eIHaNI sc-dxZgTM cShRxf">All Goals</div>
+                              <div class="sc-eIHaNI eVOlRG"></div>
+                           </div>
+                        </div>
+                        <div class="sc-fnwBNb iCueaH">
+                           <p class="sc-iNhVCk gmVVGK">Targeting info</p>
+                           <div class="sc-keVrkP jLcmVy">
+                              <div class="sc-gVLVqr bbsuAF">
+                                 <div class="d-flex">
+                                    <div class="flag_detail_of"><img class="icon-flag-cpview" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/gb.svg" style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><span class="sc-gVyKpa bbnMFd">GB</span></div>
+                                    <div class="flag_detail_of"><img class="icon-flag-cpview" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/gb.svg" style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><span class="sc-gVyKpa bbnMFd">GB</span></div>
+                                 </div>
+                              </div>
+                              <div class="sc-gVLVqr bbsuAF"><span>All cities and regions</span></div>
+                              <div class="sc-gVLVqr bbsuAF"><span>All mobile carriers</span></div>
+                              <div class="sc-gVLVqr bbsuAF"><span>desktop</span><span>mobile</span></div>
+                              <div class="sc-gVLVqr bbsuAF"><span>All OS</span></div>
+                           </div>
+                        </div>
+                     </div>
+
+
+                  </div>  
+                  
+                  <!-- postback infomation-offer-->
+                  <div class="row cpv_postback_info mt-3 pt-3">
+                     <div class="fomziX">
+                        <p class="cpv_postback_info_title">Your Postbacks</p>
+                        <div class="d-flex justify-content-end">
+                           <a class="" href="/v2/profile/postbacks">
+                              <button type="button" class="btn_pb_info d-inline-flex justify-content-center align-items-center me-1">
+                                 <span class="pb_info_icon_wr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                                       <circle cx="12" cy="12" r="10"></circle>
+                                       <line x1="2" y1="12" x2="22" y2="12"></line>
+                                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                 </span>
+                                 <span class="btn_pb_info_lb">Global postbacks</span>
+                              </button>
+                           </a>
+                           <button type="button" class="btn_pb_info  d-inline-flex justify-content-center align-items-center">
+                              <span class="pb_info_icon_wr">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                 </svg>
+                              </span>
+                              <span class="btn_pb_info_lb">Add Postback</span>
+                           </button>
+                        </div>
+                        <div class="box-pb-infomation">
+                           <div class="box-pb-inf_title" data-bs-toggle="collapse" data-bs-target="#collap_infopb" >
+                              Postback information
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                                 <line x1="12" y1="19" x2="12" y2="5"></line>
+                                 <polyline points="5 12 12 5 19 12"></polyline>
+                              </svg>
+                           </div>
+                           <div class="opostback_infomation collapse" id="collap_infopb">
+                              <p>Parameter "PostBack URL" will be useful if its necessary for you to get information about complete conversion automatically. For example in case if you keep records of conversions in external system of statistic or tracking ones at traffic sources.</p>
+                              <p>Postback-request will be send to specified URL using method GET.</p>
+                              <p>Postbacks will be sent from the given IPs:</p>
+                              <pre class="qtdd"><span>213.227.156.167<span>, </span></span><span>213.227.156.169<span>, </span></span><span>213.227.134.71<span>, </span></span><span>213.227.134.212<span>, </span></span><span>212.32.250.3<span>, </span></span><span>212.32.250.2<span>, </span></span><span>213.227.134.73<span>, </span></span><span>213.227.132.163<span>, </span></span><span>212.32.252.83</span></pre>
+                              <p>You can use macros specified below to transmit request parameters.</p>
+                              <p>Example Postback-link for transmitting of amount of received funds and subaccount:</p>
+                              <pre class="qtdd">http://example.com/mystat.php?myprofit={sum}&amp;mySubID={sub1}</pre>
+                              <p>In moment of transition macros {sum} and {subid} will be replaced to according values.</p>
+                              <hr/>
+                              <div class="sc-iGPElx jhcKlU">
+                                 <table class="table table-striped table-hover">
+                                    <thead>
+                                       <tr>
+                                          <th style="border-bottom:1px solid #dadada">Parameter</th>
+                                          <th style="border-bottom:1px solid #dadada">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr><td>{uagent}</td><td>UserAgent of user browser</td></tr>
+                                       <tr><td>{ip}</td><td>User IP-address</td></tr>
+                                       <tr><td>{sub1}</td><td>Subaccount 1</td></tr>
+                                       <tr><td>{sub2}</td><td>Subaccount 2</td></tr>
+                                       <tr><td>{sub3}</td><td>Subaccount 3</td></tr>
+                                       <tr><td>{sub4}</td><td>Subaccount 4</td></tr>
+                                       <tr><td>{sub5}</td><td>Subaccount 5</td></tr>
+                                       <tr><td>{sub6}</td><td>Subaccount 6</td></tr>
+                                       <tr><td>{sub7}</td><td>Subaccount 7</td></tr>
+                                       <tr><td>{sub8}</td><td>Subaccount 8</td></tr>
+                                       <tr><td>{ref_id}</td><td>Used to send clickid value via a postback</td></tr>
+                                       <tr><td>{os_id}</td><td>Additional parameter for tracking URL</td></tr>
+                                       <tr><td>{ext1}</td><td>Additional parameter for tracking URL</td></tr>
+                                       <tr><td>{ext2}</td><td>Additional parameter for tracking URL</td></tr>
+                                       <tr><td>{ext3}</td><td>Additional parameter for tracking URL</td></tr>
+                                       <tr><td>{transactionid}</td><td>Conversion identificator of advertiser</td></tr>
+                                       <tr><td>{date}</td><td>Date and time of conversion committing in format Y-m-d H:i:s</td></tr>
+                                       <tr><td>{click_date}</td><td>Date and time of click committing in format Y-m-d H:i:s</td></tr>
+                                       <tr><td>{offerid}</td><td>Offer identificator in the System</td></tr>
+                                       <tr><td>{offer_name}</td><td>Offer title in the System</td></tr>
+                                       <tr><td>{status}</td><td>Conversion status, available values:</td></tr>
+                                       <tr><td>{sum}</td><td>Conversion payout</td></tr>
+                                       <tr><td>{city}</td><td>City</td></tr>
+                                       <tr><td>{geo}</td><td>Country</td></tr>
+                                       <tr><td>{goal}</td><td>Goal</td></tr>
+                                       <tr><td>{currency}</td><td>Currency</td></tr>
+                                       <tr><td>{comment}</td><td>Comment</td></tr>
+                                       <tr><td>{time}</td><td>Time of conversion committing in format H:i:s</td></tr>
+                                       <tr><td>{date_only}</td><td>Date of conversion committing in format Y-m-d</td></tr>
+                                       <tr><td>{rand}</td><td>Randomly generated number</td></tr>
+                                       <tr><td>{referrer}</td><td>Click referrer</td></tr>
+                                       <tr><td>{custom_field_1}</td><td>Custom field 1</td></tr>
+                                       <tr><td>{custom_field_2}</td><td>Custom field 2</td></tr>
+                                       <tr><td>{custom_field_3}</td><td>Custom field 3</td></tr>
+                                       <tr><td>{custom_field_4}</td><td>Custom field 4</td></tr>
+                                       <tr><td>{custom_field_5}</td><td>Custom field 5</td></tr>
+                                       <tr><td>{custom_field_6}</td><td>Custom field 6</td></tr>
+                                       <tr><td>{custom_field_7}</td><td>Custom field 7</td></tr>
+                                       <tr><td>{custom_field1}</td><td>Custom field 1</td></tr>
+                                       <tr><td>{custom_field2}</td><td>Custom field 2</td></tr>
+                                       <tr><td>{custom_field3}</td><td>Custom field 3</td></tr>
+                                       <tr><td>{custom_field4}</td><td>Custom field 4</td></tr>
+                                       <tr><td>{custom_field5}</td><td>Custom field 5</td></tr>
+                                       <tr><td>{custom_field6}</td><td>Custom field 6</td></tr>
+                                       <tr><td>{custom_field7}</td><td>Custom field 7</td></tr>
+                                       <tr><td>{os}</td><td>OS Family</td></tr>
+                                       <tr><td>{timestamp}</td><td>unix timestamp of conversion creation</td></tr>
+                                       <tr><td>{fbclid}</td><td>Facebook click ID</td></tr>
+                                       <tr><td>{order_sum}</td><td>Used to send conversion's price</td></tr>
+                                       <tr><td>{order_currency}</td><td>Used to send conversion's currency</td></tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="mt-3">
+                        <p class="cpv_postback_info_title">Your Javascript Pixels</p>
+                        <div class="d-flex justify-content-end">                        
+                           <button type="button" class="btn_pb_info d-inline-flex justify-content-center align-items-center me-1">
+                              <span class="pb_info_icon_wr">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                 </svg>
+                              </span>
+                              <span class="btn_pb_info_lb">Add Pixel</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- END postback infomation-offer-->
+
+
+               </div>
+               <!--end card-body-->
+            </div>
+            
+            
+            <!-- endoffer content-->
+         </div>
+      </main>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- biểu đồ-->
+      <script src="js/chart.js"></script>
+      <script>
+         var ctx = document.getElementById('myChart');
+         var config = {
+             type: 'line',
+             data: {
+                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                 datasets: [{
+                     label: '# of Votes',
+                     data: [12, 19, 3, 5, 2, 3],
+                     backgroundColor: [
+                         'rgba(255, 99, 132, 0.2)',
+                         'rgba(54, 162, 235, 0.2)',
+                         'rgba(255, 206, 86, 0.2)',
+                         'rgba(75, 192, 192, 0.2)',
+                         'rgba(153, 102, 255, 0.2)',
+                         'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                         'rgba(255, 99, 132, 1)',
+                         'rgba(54, 162, 235, 1)',
+                         'rgba(255, 206, 86, 1)',
+                         'rgba(75, 192, 192, 1)',
+                         'rgba(153, 102, 255, 1)',
+                         'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1,
+                     tension: 0.4,
+                 }
+                 ,
+                 {
+                     label: '# of Votes2',
+                     data: [11, 12, 1, 15, 22, 3],
+                     backgroundColor: [
+                         'rgba(255, 99, 132, 0.2)',
+                         'rgba(54, 162, 235, 0.2)',
+                         'rgba(255, 206, 86, 0.2)',
+                         'rgba(75, 192, 192, 0.2)',
+                         'rgba(153, 102, 255, 0.2)',
+                         'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                         'rgba(255, 99, 132, 1)',
+                         'rgba(54, 162, 235, 1)',
+                         'rgba(255, 206, 86, 1)',
+                         'rgba(75, 192, 192, 1)',
+                         'rgba(153, 102, 255, 1)',
+                         'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1,
+                     tension: 0.4,
+                 }
+             ]
+             },
+             options: {
+                 interaction: {
+                     intersect: false,
+                     mode: 'index',
+                 },
+                 scales: {
+                     y: {
+                         beginAtZero: true
+                     }
+                 },
+                 plugins: {
+                     legend: {                        
+                         position : 'bottom',
+                         labels: {
+                                 usePointStyle: true,
+                                 pointStyle:"line"
+                         },
+                         
+                     }
+                 }
+             }
+         }
+         
+         
+         var myChart = new Chart(ctx, config);
+         
+      </script>
+   </body>
+</html>

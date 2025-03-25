@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>adminmmo</title>
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <link href="css/bootstrap-theme.min" rel="stylesheet"/>
+      <link href="css/style.css" rel="stylesheet"/>
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+     <!---------------------------------------------------------top menu----------------------------------------->
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+          
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#anhien">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" class="pull-left" src="avatar5.jpg"/>
+                <span class="pull-left hidden-xs">Adminmmo.com</span>
+              </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="anhien">   
+              <ul class="nav navbar-nav navbar-right">                
+                <li class="dropdown hidden-xs parentli">
+					<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
+						<i class="glyphicon glyphicon-tasks"></i> 
+                        <span class="label label-warning hidden-xs">17</span>
+					</a>
+					<ul class="dropdown-menu tasks">
+						<li>
+							<span class="dropdown-menu-title">You have 17 tasks in progress</span>
+                    	</li>
+					</ul>
+				</li>
+                <li class="dropdown hidden-xs parentli">
+    				<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
+    					<i class="glyphicon glyphicon-warning-sign"></i> 
+                        <span class="label label-danger">2</span> 
+                        <span class="label label-success hidden-xs">11</span>
+    				</a>
+    				<ul class="dropdown-menu notifications">
+    					<li>
+    						<span class="dropdown-menu-title">You have 11 notifications</span>
+    					</li>	
+    					<li>
+                            <a href="#">
+    							+ <i class="glyphicon glyphicon-comment"></i> <span class="message">New comment</span> <span class="time">8 min</span> 
+                            </a>
+                        </li>
+    					<li class="warning">
+                            <a href="#">
+    							- <i class="glyphicon glyphicon-user icon-red"></i> <span class="message">User deleted account</span> <span class="time">2 hour</span> 
+                            </a>
+                        </li>
+    					<li>
+                            <a href="#">
+    							+ <i class="glyphicon glyphicon-comment"></i> <span class="message">New comment</span> <span class="time">yesterday</span> 
+                            </a>
+                        </li>
+                        <li>
+                    		<a class="dropdown-menu-sub-footer">View all notifications</a>
+    					</li>	
+    				</ul>
+    			</li>
+                <li class="parentli">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class=" glyphicon glyphicon-wrench"></i>
+                    </a>
+                </li>
+                <li class="parentli">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>                     
+                        <span class="caret"></span><!-- mui ten-->
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+     <!---------------------end top menu-------------------------------------------------------------------->
+     <div class="container-fluid wrapper1">     
+        <div class="row">
+            <div class="col-sm-1 col-xs-1 col-md-2 menuleft">
+                <ul class="nav nav-pills nav-stacked">
+                
+                  <li class="active">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="hidden-xs hidden-sm">Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-cloud"></span>
+                        <span class="hidden-xs hidden-sm">Report</span>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                            <span class="glyphicon glyphicon-flash"></span>
+                            <span class="hidden-xs hidden-sm">Dow</span>
+                        </a>
+                      <ul style="display: block;">
+						<li><a href="submenu.html" class="submenu"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
+						<li><a href="submenu.html" class="submenu"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
+						<li><a href="submenu.html" class="submenu"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
+					</ul>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-sm-11 col-xs-11 col-md-10 noidung">
+            
+            
+            <div class="row">				
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a href="#">Tables</a>
+					</li>
+				</ul>
+				<hr/>
+			</div>
+           
+           dsfds
+                
+            </div>
+        </div>
+     </div>
+     <!--------en noi dung----------------------->
+     <!--footer----------------------------------->
+     <footer class="footer">
+      <div class="container-fluid">
+        <p class="text-muted">Place sticky footer content here.</p>
+        <span style="text-align:left;float:left">&copy; <a href="" target="_blank">creativeLabs</a> 2013</span>
+      </div>
+    </footer>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

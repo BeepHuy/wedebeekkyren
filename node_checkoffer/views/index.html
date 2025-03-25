@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var network_source = '';
+        var socket = io();
+        socket.on('network_source', (data) => {
+            network_source = data
+        })
+        socket.on('data_check', (data) => {
+            //console.log(data);
+            var collection = document.getElementById(data.index).children;
+            collection[2].innerHTML = data.url;
+            var source = check_source(data.url);
+            collection[3].innerHTML = source;
+
+        })
+        function check_source(url) {
+            var name = 'N/A';
+            if (network_source) {
+                for (var i = 0; i < network_source.length; i++) {
+                    if (url.indexOf(network_source[i].ns_code) > 0) {
+                        name = network_source[i].ns_name;
+                    }
+                }
+            }
+            return name;
+
+        }
+        $(document).ready(function () {
+
+            $("#frrm").submit(function (e) {
+                e.preventDefault();
+                var ssh = $('#ssh').val();
+                var url = $('#url').val();
+                var table_dt = '';
+                var urls = url.replace(/\r\n/g, "\n").split('\n');
+                if (urls) {
+                    for (var i = 0; i < urls.length; i++) {
+                        table_dt += ` <tr id="${i}">
+                                <th scope="row">${i + 1}</th>
+                                <td>${urls[i]}</td>
+                                <td>
+                                    <div class="spinner-border text-success" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </td>
+                                <td><div class="spinner-border text-info" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div></td>
+                            </tr>`;
+                    }
+                }
+                $('#nd').html(table_dt);
+
+                $("#senddt").val('Loading....');
+                $.ajax({
+                    url: 'http://localhost:3000/check_source',
+                    method: 'post',
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://wedebeek.com/upload/files/logo.png" width="30" height="30"
+                    class="d-inline-block align-top" alt="">
+                Wedebeek
+            </a>
+        </nav>
+        <form class="pt-5" id="frrm" method="POST" action="http://localhost:3000/check_source">
+            <div class="form-group">
+                <label for="1">SSH</label>
+                <input type="text" name="ssh" class="form-control" id="ssh" placeholder="SSH">
+            </div>
+            <div class="form-group">
+                <label for="2">Url</label>
+                <textarea class="form-control" id="url" name="url" rows="3"></textarea>
+            </div>
+
+            <button type="submit" id="senddt" class="btn btn-primary">Submit</button>
+        </form>
+        <hr />
+        <table class="table thead-light table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">End Url</th>
+                    <th scope="col">Source</th>
+                </tr>
+            </thead>
+            <tbody id="nd">
+
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
