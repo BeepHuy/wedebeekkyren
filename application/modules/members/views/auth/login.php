@@ -29,7 +29,9 @@
 			<main class="sc-fAjcbJ kFfNqn">
 				<div class="sc-Rmtcm cIUDWQ">
 					<div class="sc-bRBYWo eVigII">
-						<img src="<?php echo $this->pub_config['logo'];?>" class="sc-VigVT iApbYG">
+						<img src="<?php echo $this->pub_config['logo'];?>" class="sc-VigVT iApbYG" 
+							style="cursor: grab;"
+							onclick="window.location.href='<?php echo base_url(''); ?>';">
                   <span class="sc-jhAzac cnxHgy">Wedebeek Technology Limited</span>
 						<div class="sc-hzDkRC ioyCcs">
 							<form class="sc-kpOJdX kFPdwr" method="post" action="">

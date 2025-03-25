@@ -1,3 +1,6 @@
+<link rel="stylesheet"  href="<?php echo base_url('temp/default/home_site'); ?>/css/menuhead.css" />
+<script src="<?php echo base_url('temp/default/home_site'); ?>/js/menuhead.js"></script>
+
 <!-- Fixed navbar -->
 <nav class="navbar navbar-expand-lg fixed-top bg-custom" id="navbar" aria-label="Tenth navbar example">
     <div class="container-fluid">
@@ -20,7 +23,7 @@
             </li>
         </ul>
         <div class="w20 text-center d-none d-lg-block">
-            <a class="navbar-brand d-none d-lg-block px-lg-6 w20"  href="./index.html">                    
+            <a class="navbar-brand d-none d-lg-block px-lg-6 w20"  href="<?php echo base_url();?>">                    
             <img id="logo" src="https://wedebeek.com/upload/files/logo.png"/>
             </a>
             <div class="mt-2" id="text-brand-lg">Wedebeek</div>
@@ -33,10 +36,19 @@
                 <a href="<?php echo base_url('contact');?>" class="nav-link ">CONTACT</a>
             </li>
             <li class="nav-item  mx-3 menu-login">
-                <a class="nav-link btn-login-menu" href="<?php echo base_url('v2/sign/in');?>">LOGIN</a>
+                <a class="nav-link btn-login-menu" href="#" id="loginDropdown" role="button" onclick="toggleMenu(event, 'loginMenu')">LOGIN</a>
+                <div id="loginMenu" class="dropdown-menu-custom" style="display: none;">
+                    <a class="dropdown-item" href="<?php echo base_url('v2/sign/in'); ?>">PUBLISHER</a>
+                    <a class="dropdown-item" href="<?php echo base_url('v3/sign/in'); ?>">ADVERTISER</a>
+                </div>
             </li>
-            <li class="nav-item  mx-3 menu-signup">
-                <a class="nav-link btn-signup-menu" href="<?php echo base_url('v2/sign/up');?>">SIGN UP</a>
+
+            <li class="nav-item mx-3 menu-signup">
+                <a class="nav-link btn-signup-menu" href="#" id="signupDropdown" role="button" onclick="toggleMenu(event, 'signupMenu')">SIGN UP</a>
+                <div id="signupMenu" class="dropdown-menu-custom" style="display: none;">
+                    <a class="dropdown-item" href="<?php echo base_url('v2/sign/up'); ?>">PUBLISHER</a>
+                    <a class="dropdown-item" href="<?php echo base_url('v3/sign/up'); ?>">ADVERTISER</a>
+                </div>
             </li>
         </ul>
     </div>
