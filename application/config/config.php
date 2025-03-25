@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /////config mini point cashout
 
-$config['base_url']	= 'http://localhost/wedebeekkyren/wedebeek/';
+$config['base_url']	= 'https://34.29.148.81/';
 $config['index_page'] = '';
 $config['ini'] = 'sfdsf';
 $config['admin'] = 'admin';//thu muc viw van giu la admin temp van giu admin chi country thay doi
