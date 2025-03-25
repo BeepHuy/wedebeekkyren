@@ -100,7 +100,11 @@ $route['v2/logout'] = 'members/auth/logout';
 $route['v/(:any)'] = 'home/view_content/$1';
 $route['v/'] = 'home/view_content';
 
-
+// v3 Advertiser 
+$route['v3/sign/up'] = 'advertiser/auth/register';
+$route['v3/sign/in'] = 'advertiser/auth/login';
+$route['v3/logout'] = 'advertiser/auth/logout';
+$route['v3/news/(:any)'] = 'news/views/$1';
 
 //click
 $route['click/testpb?(:any)'] = 'click/testpb/$1';

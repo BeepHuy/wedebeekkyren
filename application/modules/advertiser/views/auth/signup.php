@@ -1,210 +1,339 @@
-<html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-      <title>Authorization</title>
-      <!-- Bootstrap core CSS -->
-      <link href="<?php echo base_url();?>temp/default/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Custom styles for this template -->
-      <link href="<?php echo base_url();?>/temp/default/css/login.css" rel="stylesheet">
-      <script src="<?php echo base_url();?>/temp/default/js/multiple/jquery-3.2.1.min.js" type="text/javascript"></script>
-   <body>
-		<section class="h-100">
-			<div class="container h-100">
-				<div class="row justify-content-sm-center h-100">
-					<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-						<div class="text-center my-5">
-							<img src="<?php echo $this->pub_config['logo'];?>" alt="logo" width="100">
-						</div>
-						<div class="card shadow-lg">
-							<div class="card-body p-5">
-								<h1 class="fs-4 card-title fw-bold mb-4">Aadvertiser Register</h1>
-								<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
-									<div class="mb-3">
-										<label class="mb-2 text-muted">Username</label>
-										<input id="name" type="text" class="form-control" name="username" value="" required autofocus>
-										<div class="invalid-feedback">
-										Username is required	
-										</div>
-									</div>
+<!DOCTYPE html>
+<html lang="en">
 
-									<div class="mb-3">
-										<label class="mb-2 text-muted" for="email">E-Mail Address</label>
-										<input id="email" type="email" class="form-control" name="email" value="" required>
-										<div class="invalid-feedback">
-											Email is invalid
-										</div>
-									</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Advertiser</title>
+    <link href="<?php echo base_url(); ?>temp/default/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/temp/default/css/login.css" rel="stylesheet">
+    <link href="<?php echo base_url('/temp/pulisher/css/style.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('/temp/pulisher/css/error.css'); ?>" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .ajax-error {
+            color: white !important;
+            background-color: darkred;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
 
-									<div class="mb-3">
-										<label class="mb-2 text-muted" for="password">Password</label>
-										<input id="password" type="password" class="form-control" name="password" required>
-										<div class="invalid-feedback">
-											Password is required
-										</div>
-									</div>
-									<div class="mb-3">
-										<label class="mb-2 text-muted" for="confirm_pass">Repeat Password</label>
-										<input id="confirm_pass" type="password" class="form-control" name="confirm_pass" required>										
-									</div>
+        .alert-success {
+            color: white !important;
+            background-color: green;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
 
-									<div class="mb-3">
-										<label class="mb-2 text-muted">First Name</label>
-										<input type="text" class="form-control" name="mailling[firstname]" value="<?php if(!empty($this->mailling['firstname'])) echo $this->mailling['firstname']; ?>" required autofocus>										
-									</div>
+</head>
 
-									<div class="mb-3">
-										<label class="mb-2 text-muted">Last Name</label>
-										<input type="text" class="form-control" name="mailling[lastname]" value="<?php if(!empty($this->mailling['lastname'])) echo $this->mailling['lastname']; ?>" required autofocus>										
-									</div>
+<body>
+    <div class="loader"><i class="dot"></i> <i class="dot"></i> <i class="dot"></i></div>
 
-									<div class="mb-3">
-										<label class="mb-2 text-muted">Address</label>
-										<input type="text" class="form-control" name="mailling[ad]" required autofocus>
-										<div class="invalid-feedback">
-										Address is required	
-										</div>
-									</div>
-
-									<div class="mb-3">
-										<label class="mb-2 text-muted">Skype ID/Telegram</label>
-										<input type="text" class="form-control" name="mailling[im_service]" value="" required autofocus>										
-									</div>
-
-									<div class="mb-3">
-										<label class="mb-2 text-muted">Website</label>
-										<input type="text" class="form-control" name="mailling[website]" value="<?php if(!empty($this->mailling['website'])) echo $this->mailling['website']; ?>" required autofocus>										
-									</div>
-
-									<div class="mb-3">
-										<label class="mb-2 text-muted">Please choose your offer category</label>
-										<div class="row">
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Email"  id="3hb7d8ttm7s"><label  for="3hb7d8ttm7s"><span >Email</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Display Ads / Banner" id="2cdavgdda5s"><label  for="2cdavgdda5s"><span >Display Ads / Banner</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Push / Pop" id="6utpnjadgav"><label  for="6utpnjadgav"><span >Push / Pop</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Google AdWords / BingAds" id="372aiuurbkgg"><label  for="372aiuurbkgg"><span >Google AdWords / BingAds</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Social Media" id="32so1b6sjt8g"><label  for="32so1b6sjt8g"><span >Social Media</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="SEO, SEM, SMO" id="3ieemgb049m"><label  for="3ieemgb049m"><span >SEO, SEM, SMO</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Personal Blog / website" id="8h66fjlbtt6"><label  for="8h66fjlbtt6"><span >Personal Blog / website</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Mobile traffic" id="8kedd012c3a"><label  for="8kedd012c3a"><span >Mobile traffic</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Incent" id="28mnqg6q639g"><label  for="28mnqg6q639g"><span >Incent</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Media buying" id="6hvtd09624p"><label  for="6hvtd09624p"><span >Media buying</span></label></div>
-											<div class="col-auto"><input type="checkbox" name="aff_type[]" value="Other" id="4257d4svurr"><label  for="4257d4svurr"><span >Other</span></label></div>
-										</div>									
-									</div>
-
-									<div class="mb-3">
-										<label class="mb-2 text-muted">How did you find us?*</label>
-										<textarea class="form-control" name="mailling[hear_about]" rows="3"></textarea>										
-									</div>
-
-									<!--p class="form-text text-muted mb-3">
-										By registering you agree with our terms and condition.
-									</p-->
-									<div class="mb-3 form-check">
-										<input type="checkbox" class="form-check-input"  name="mailling[terms]" id="terms">
-										<label class="form-check-label" for="terms">I agree with <a class="sc-jWBwVP bBsnzv" target="_blank" href="<?php echo base_url('v2/terms');?>">Terms And Conditions</a></label>
-									</div>
-
-									<div class="mb-3 form-check">
-										<input type="checkbox" class="form-check-input"  name="mailling[terms2]" id="terms2">
-										<label class="form-check-label" for="terms2">
-										I hereby consent and allow the use of my and/or my companys information, including sharing with a third party, to assess, detect, prevent or otherwise enable detection and prevention of malicious, invalid or unlawful activity and/or general fraud prevention.
-										</label>
-									</div>
-									<div class="align-items-center d-flex">
-										<button type="submit" class="btn btn-primary ms-auto btn_signup">
-											Register	
-										</button>
-									</div>
-								</form>
-							</div>
-							<div class="card-footer py-3 border-0">
-								<div class="text-center">
-									Already have an account? <a href="<?php echo base_url('v2/sign/in');?>" class="text-dark">Login</a>
-								</div>
-							</div>
-						</div>
-						<div class="text-center mt-5 text-muted">
-							Copyright &copy; 2021 &mdash;  Wedebeek team
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-      <!--thoong bao -->
-      <div class="position-fixed top-0 end-0 p-5 hide">
-         <div class="toast fade alert-info" role="alert" aria-live="assertive" aria-atomic="true" id="thongBao">
-            <div class="toast-body">
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-               </svg>
-               <span class="toastContent">
-               Successfully edited profile
-               </span>   
+    <!-- Header -->
+    <header class="sc-bdVaJa hTXyZr">
+        <div class="sc-bxivhb cpOYPG"></div>
+        <div class="ECBVuC1-2xlutADBhrw- ON7Z_5ZehzihyO3o4vqbE" data-test-id="menu-English">
+            <div class="_37NUkzmoyY2UEU1AerMvXX">
+                <span class="_2cCWo1Fd19nOeZ9SafKr1H">English</span>
             </div>
-         </div>
-      </div>
-      <!--thong bao loi-->
-      <div class="position-fixed top-0 end-0 p-5 hide">
-         <div class="toast fade alert-info" role="alert" aria-live="assertive" aria-atomic="true" id="thongBao2">
-            <div class="toast-body bg-danger text-white">
-               <span class="toastContent ">
-               Successfully edited profile
-               </span>   
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Form Container -->
+    <main class="sc-fAjcbJ kFfNqn">
+        <div class='form-container'>
+            <div class="brand">
+                <img src=" <?php echo base_url() ?>/upload/files/website_logo_transparent_background.png"
+                    class="logo1" style="width:450px; height:auto; cursor: grab;"
+                    onclick="window.location.href='<?php echo base_url(''); ?>';">
+                <span>Wedebeek Technology Limited</span>
             </div>
-         </div>
-      </div>
-      <script>
-         $(document).ready(function(){               
-            $('.btn_signup').on('click',function(e){
-               e.preventDefault();
-               var form = $(this).closest('form');         
-               ajurl = "<?php echo base_url('advertiser/signup');?>";
-               $.ajax({
-                     type:"POST",
-                     url:ajurl,
-                     data:form.serialize(),
-                     success:ajaxSuccess,
-                     error:ajaxErr                     
-               });
-            })
-         
-         });
-         
-         function ajaxErr(){
-            alert('Network Error!');
-         }
-         function ajaxSuccess(data){
-            const obj = JSON.parse(data);
-            if(obj.error==0){
-         		$('.toastContent').html(obj.data);
-         		var myAlert =document.getElementById('thongBao');//select id of toast
-         		var bsAlert = new bootstrap.Toast(myAlert,{
-         				animation:true,
-         				delay:10000,
-         				autohide:true
-         				});//inizialize it
-         		bsAlert.show();//show it  
-         		setTimeout(() => {
-                           	window.location.href = "<?php echo base_url('v2');?>";
-                        	}, 15000);
-            }else{
-         		$('.toastContent').html(obj.data);
-         		var myAlert =document.getElementById('thongBao2');//select id of toast
-         		var bsAlert = new bootstrap.Toast(myAlert,option);//inizialize it
-         		bsAlert.show();//show it  
-            }              
-             
-         }
-         var option = {
-            animation:true,
-            delay:5000,
-            autohide:true
-         };
-      </script>
-      <script src="<?php echo base_url();?>temp/default/js/bootstrap.min.js"></script>
-      <script src="<?php echo base_url();?>temp/default/js/bootstrap.bundle.min.js"></script>
-   </body>
+
+            <!-- Div này sẽ hiện lỗi từ AJAX -->
+            <div class="alert alert-success error-container ajax-error" style="display:none; color:red;"></div>
+
+            <div>
+                <div class="form-row">
+                    <h2 class='signup'>SIGN UP</h2>
+                    <h2 class='title'>AS ADVERTISER</h2>
+                </div>
+                <!-- Thêm id="registerForm" để AJAX submit -->
+                <form id="registerForm" action="<?php echo site_url('v3/sign/up'); ?>" method="post" enctype="multipart/form-data">
+
+                    <div class="form-row">
+                        <label for="firstname">First Name *</label>
+                        <input type="text" name="mailling[firstname]" id="firstname">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="lastname">Last Name *</label>
+                        <input type="text" name="mailling[lastname]" id="lastname">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone. *</label>
+                        <input type="number" name="phone" id="phone">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email *</label>
+                        <input type="text" name="email" id='email'>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="pass">Password *</label>
+                        <input type="password" name="password" id='password'>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="confirm_pass">Repeat Password *</label>
+                        <input type="password" name="confirm_pass" id='confirm_pass'>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="contact">Skype ID/ Telegram *</label>
+                        <input type="text" name="mailling[im_service]" id='contact'>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="company">Company Name</label>
+                        <input type="text" name="mailling[company]" id="company">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="street">Street *</label>
+                        <input type="text" name="mailling[street]" id="street">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="city">City *</label>
+                        <input type="text" name="mailling[city]" id="city">
+                    </div>
+                    <div class="form-row">
+                        <label for="reg_cert">Company Registration Certificate *</label>
+                        <input type="file" name="reg_cert[]" id="reg_cert" multiple style="padding: 2px 10px;">
+                    </div>
+
+
+                    <div class="form-row">
+                        <label for="country_id">Country *</label>
+                        <select name="mailling[country]" id="country_id" style="text-align: left;">
+                            <option value="">Please select country</option>
+                            <?php foreach ($country as $value) { ?>
+                                <option value="<?php echo $value->country ?>" id="<?php echo $value->keycode ?>"><?php echo $value->country ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="st_reg">State/Region *</label>
+                        <select name="mailling[state]" id="st_reg" style="text-align: left;"></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="category_id">Category *</label>
+                        <select name="mailling[category]" id="category_id" style="text-align: left;">
+                            <option value="">Please select category</option>
+                            <?php foreach ($category as $value) { ?>
+                                <option value="<?php echo $value->title ?>" id="<?php echo $value->title ?>">
+                                    <?php echo $value->title ?>
+                                </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="zip">Zip Code *</label>
+                        <input type="text" name="mailling[zip]" id="zip">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="payout">Payout *</label>
+                        <input type="text" name="payout" id="payout">
+                    </div>
+                    <div class="form-row">
+                        <label for="website">URL Website *</label>
+                        <input type="text" name="mailling[website]" id="website">
+                    </div>
+                    <div class="form-row">
+                        <label for="offername">Offer Name *</label>
+                        <input type="text" name="mailling[offername]" id="offername">
+                    </div>
+                    <p style="margin:0 0 15px 185px;font-size: 12px; max-width:340px;font-style: italic;">
+                        Please list at least 1 Offer Name you want to use as an advertiser with Wedebeek’’
+                    </p>
+
+                    <div class="form-row">
+                        <label for="biz_desc">Briefly Describe Your Business Activities *</label>
+                        <textarea name="biz_desc" class="textarea" id="biz_desc" style="height: 70px;"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="traffic_src">Allow Traffic Source *</label>
+                        <div class='sc-gipzik fusulQ traffic'>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Google Organic" id="3hb7d8ttm7s"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="3hb7d8ttm7s"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Google Organic</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Paid Google Search" id="2cdavgdda5s"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="2cdavgdda5s"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Paid Google Search</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Display Advertising" id="6utpnjadgav"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="6utpnjadgav"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Display Advertising</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Referral (backlink/ banner)" id="372aiuurbkgg"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="372aiuurbkgg"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" style='white-space: nowrap; width: 100%;'>Referral (backlink/ banner)</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Social Traffic" id="32so1b6sjt8g"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="32so1b6sjt8g"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Social Traffic</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Media Buyer (network adverting)" id="3ieemgb049m"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="3ieemgb049m"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" style='white-space: nowrap; width: 100%;'>Media Buyer (network adverting)</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Email Traffic" id="8h66fjlbtt6"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="8h66fjlbtt6"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Email Traffic</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Mobile Traffic" id="8kedd012c3a"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="8kedd012c3a"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Mobile Traffic</span></label></div>
+                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Other Traffic" id="28mnqg6q639g"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="28mnqg6q639g"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Other Traffic</span></label></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="mailling[terms]" value="1" id="agree1">
+                            <label for="agree1">
+                                <span>
+                                    <span>I agree with
+                                        <a target="_blank" href="<?php echo base_url('/v3/news/3'); ?>">Terms And Conditions</a>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="agree2" id="agree2">
+                            <label for="agree2">
+                                <span class="">I hereby consent and allow the use of my and/or my companys information, including sharing with a third party, to assess, detect, prevent or otherwise enable detection and prevention of malicious, invalid or unlawful activity and/or general fraud prevention.</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit">Sign Up</button>
+                        <span class='haveaccount'>Already have account?
+                            <a href="<?php echo base_url('v3/sign/in'); ?>">Sign in</a>
+                        </span>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+    </main>
+    <!-- End Form Container -->
+
+    <!-- Footer -->
+    <footer class="sc-ifAKCX hbyzzN">
+        <span>Powered by&nbsp;<a target="_blank" rel="noreferrer" href="https://wedebeek.com/">Wedebeek team</a>&nbsp;2021</span>
+        <div class="sc-bZQynM dAZhcd">
+            <a href="https://www.linkedin.com/in/biphan-wedebeek/" rel="noreferrer" target="_blank">Our LinkedIn </a>
+            <a href="https://www.facebook.com/teamwedebeek" rel="noreferrer" target="_blank">Our Facebook</a>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script>
+        $(document).ready(function() {
+            //Trả về danh sách state khi chọn country
+            $('#country_id').change(function() {
+                var ckey = $('#country_id option:selected').attr('id');
+                var country_name = $('#country_id option:selected').text();
+                $.ajax({
+                    url: 'https://api.countrystatecity.in/v1/countries/' + ckey + '/states',
+                    type: 'GET',
+                    headers: {
+                        'X-CSCAPI-KEY': 'cGhRTmJ4am5YeUxSWVczbkIzZTNNQm14MWxsalg5dEw2MUxFeU5SSg=='
+                    },
+                    success: function(response) {
+                        var htmlContent = '';
+                        if (response.length > 0) {
+                            response.forEach(function(value) {
+                                htmlContent += "<option value='" + value.name + "'>" + value.name + "</option>";
+                            });
+                        } else {
+                            htmlContent = "<option value='" + country_name + "'>" + country_name + "</option>";
+                        }
+
+                        $('#st_reg').html(htmlContent);
+                    },
+                    error: function(xhr, status, error) {
+                        $('#st_reg').html("<option value='" + country_name + "'>" + country_name + "</option>");
+                    }
+                });
+            });
+
+            // ----- AJAX submit form -----
+            $('#registerForm').on('submit', function(e) {
+                e.preventDefault();
+
+                var form = $(this);
+                var ajurl = "<?php echo site_url('v3/sign/up'); ?>";
+                // FormData để gửi cả file và input
+                var formData = new FormData(form[0]);
+                $.ajax({
+                    type: "POST",
+                    url: ajurl,
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(data) {
+                        var obj = {};
+                        try {
+                            obj = JSON.parse(data);
+                        } catch (e) {
+                            // Nếu có lỗi parse JSON
+                            alert('Phản hồi từ server không hợp lệ!');
+
+                            return;
+                        }
+                        if (obj.error == 0) {
+                            // ----- Trường hợp đăng ký thành công -----
+                            $('.ajax-error')
+                                /* console.log($obj.data); */
+                                // Xóa class thể hiện lỗi
+                                .removeClass('error-container')
+                                // Thêm class để hiển thị thông báo thành công
+                                .addClass('alert alert-success')
+                                //noi dung thong bao
+                                .html(obj.data)
+                                // Hiển thị phần tử
+                                .show();
+
+                            // Sau 3 giây thì chuyển sang trang đăng nhập
+                            setTimeout(function() {
+                                window.location.href = "<?php echo site_url('v3/sign/in'); ?>";
+                            }, 2000);
+
+                        } else {
+                            // ----- Trường hợp có lỗi trả về -----
+                            $('.ajax-error')
+                                .removeClass('alert alert-success')
+                                .addClass('error-container')
+                                .html(obj.data)
+                                .show();
+
+                            // Tùy ý: cho lỗi tự ẩn sau 5 giây 
+                            setTimeout(function() {
+                                $('.ajax-error').fadeOut('slow');
+                            }, 5000);
+                        }
+                    },
+                    error: function() {
+                        alert('Network Error!');
+                    }
+                });
+            });
+
+            // Ẩn .ajax-error ngay khi user bắt đầu nhập
+            $('input, textarea, select').on('input change', function() {
+                $('.ajax-error').fadeOut('fast');
+            });
+
+        });
+    </script>
+
+
+</body>
+
 </html>

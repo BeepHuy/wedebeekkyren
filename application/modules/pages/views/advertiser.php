@@ -65,7 +65,7 @@
          </section>
          <section class=" section_block">
             <div class="wrap box-button-signup menu-signup">
-               <a href="#" type="button" class="btn-signup-menu signup-adver">Advertiser Account</a>
+               <a href="<?php echo base_url('v3/sign/up');?>" type="button" class="btn-signup-menu signup-adver">Advertiser Account</a>
             </div>
          </section>
       </section>

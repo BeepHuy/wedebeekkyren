@@ -187,7 +187,7 @@
                     <!-- Country -->
                     <div class="form-row">
                         <label for="country_id">Country *</label>
-                        <select name="mailling[country]" id="country_id" style="border-radius: 20px;">
+                        <select name="mailling[country]" id="country_id" style="border-radius: 20px; text-align: left;">
                             <option value="">Please select country</option>
                             <?php foreach ($country as $value) {?>
                             <option value="<?php echo $value->country?>" id="<?php echo $value->keycode?>"><?php echo $value->country?></option>
@@ -198,7 +198,7 @@
                     <!-- State/Region -->
                     <div class="form-row">
                         <label for="st_reg">State/Region *</label>
-                        <select name="mailling[state]" id="st_reg" style="border-radius: 20px;"></select>
+                        <select name="mailling[state]" id="st_reg" style="border-radius: 20px; text-align: left;"></select>
                     </div>
                     
                     <!-- Zip Code -->

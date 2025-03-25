@@ -13,55 +13,65 @@
       <link href="<?php echo base_url('temp/default/home_site');?>/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet"  href="<?php echo base_url('temp/default/home_site');?>/css/style.css"/>
       <link rel="stylesheet"  href="<?php echo base_url('temp/default/home_site');?>/css/lightslider.css"/>
+      <link rel="stylesheet"  href="<?php echo base_url('temp/default/home_site'); ?>/css/menuhead.css" />
       <link rel="stylesheet"  href="<?php echo base_url('temp/default/pages');?>/css/style.css"/>   
       <meta name='ir-site-verification-token' value='- 296595'>
       <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ea5bb59c39f62b49f504a89e5b83412b3e996f57"></script>
    </head>
    <body>
       <!-- Fixed navbar -->
-<nav class="navbar navbar-expand-lg fixed-top bg-custom" id="navbar" aria-label="Tenth navbar example">
-    <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse my-2" id="navbarsExample08">
-        <ul class="navbar-nav justify-content-end w-100" >
-            <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="<?php echo base_url();?>">HOME</a>
-            </li>
-            <li class="nav-item  mx-3">
-                <a class="nav-link" aria-current="page" href="<?php echo base_url('aboutus');?>">ABOUT US</a>
-            </li>
-            <li class="nav-item  mx-3">
-                <a class="nav-link" aria-current="page" href="<?php echo base_url('advertiser');?>">ADVERTISER</a>
-            </li>
-            <li class="nav-item  mx-3">
-                <a class="nav-link" aria-current="page" href="<?php echo base_url('publisher');?>">PUBLISHER</a>
-            </li>
-        </ul>
-        <div class="w20 text-center d-none d-lg-block">
-            <a class="navbar-brand d-none d-lg-block px-lg-6 w20"  href="./index.html">                    
-            <img id="logo" src="https://wedebeek.com/upload/files/logo.png"/>
-            </a>
-            <div class="mt-2" id="text-brand-lg">Wedebeek</div>
-        </div>
-        <ul class="navbar-nav justify-content-start w-100">
-            <li class="nav-item  mx-3">
-                <a class="nav-link" href="<?php echo base_url('products');?>">PRODUCTS </a>
-            </li>
-            <li class="nav-item  mx-3">
-                <a href="<?php echo base_url('contact');?>" class="nav-link ">CONTACT</a>
-            </li>
-            <li class="nav-item  mx-3 menu-login">
-                <a class="nav-link btn-login-menu" href="<?php echo base_url('v2/sign/in');?>">LOGIN</a>
-            </li>
-            <li class="nav-item  mx-3 menu-signup">
-                <a class="nav-link btn-signup-menu" href="<?php echo base_url('v2/sign/up');?>">SIGN UP</a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</nav>
+      <nav class="navbar navbar-expand-lg fixed-top bg-custom" id="navbar" aria-label="Tenth navbar example">
+         <div class="container-fluid">
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse my-2" id="navbarsExample08">
+            <ul class="navbar-nav justify-content-end w-100" >
+                  <li class="nav-item mx-3">
+                     <a class="nav-link active" aria-current="page" href="<?php echo base_url();?>">HOME</a>
+                  </li>
+                  <li class="nav-item  mx-3">
+                     <a class="nav-link" aria-current="page" href="<?php echo base_url('aboutus');?>">ABOUT US</a>
+                  </li>
+                  <li class="nav-item  mx-3">
+                     <a class="nav-link" aria-current="page" href="<?php echo base_url('advertiser');?>">ADVERTISER</a>
+                  </li>
+                  <li class="nav-item  mx-3">
+                     <a class="nav-link" aria-current="page" href="<?php echo base_url('publisher');?>">PUBLISHER</a>
+                  </li>
+            </ul>
+            <div class="w20 text-center d-none d-lg-block">
+                  <a class="navbar-brand d-none d-lg-block px-lg-6 w20"  href="<?php echo base_url();?>">                    
+                  <img id="logo" src="https://wedebeek.com/upload/files/logo.png"/>
+                  </a>
+                  <div class="mt-2" id="text-brand-lg">Wedebeek</div>
+            </div>
+            <ul class="navbar-nav justify-content-start w-100">
+                  <li class="nav-item  mx-3">
+                     <a class="nav-link" href="<?php echo base_url('products');?>">PRODUCTS </a>
+                  </li>
+                  <li class="nav-item  mx-3">
+                     <a href="<?php echo base_url('contact');?>" class="nav-link ">CONTACT</a>
+                  </li>
+                  <li class="nav-item  mx-3 menu-login">
+                     <a class="nav-link btn-login-menu" href="#" id="loginDropdown" role="button" onclick="toggleMenu(event, 'loginMenu')">LOGIN</a>
+                     <div id="loginMenu" class="dropdown-menu-custom" style="display: none;">
+                        <a class="dropdown-item" href="<?php echo base_url('v2/sign/in'); ?>">PUBLISHER</a>
+                        <a class="dropdown-item" href="<?php echo base_url('v3/sign/in'); ?>">ADVERTISER</a>
+                     </div>
+                  </li>
+
+                  <li class="nav-item mx-3 menu-signup">
+                     <a class="nav-link btn-signup-menu" href="#" id="signupDropdown" role="button" onclick="toggleMenu(event, 'signupMenu')">SIGN UP</a>
+                     <div id="signupMenu" class="dropdown-menu-custom" style="display: none;">
+                        <a class="dropdown-item" href="<?php echo base_url('v2/sign/up'); ?>">PUBLISHER</a>
+                        <a class="dropdown-item" href="<?php echo base_url('v3/sign/up'); ?>">ADVERTISER</a>
+                     </div>
+                  </li>
+               </ul>
+         </div>
+         </div>
+      </nav>
       <!--1-->
       <div class="bg-dark text-secondary px-4 py-5 text-center nd1 d-flex align-items-center justify-content-center">
          <div class="overlay"></div>
@@ -86,7 +96,7 @@
                   </div>
                   <div class="mb-3 d-flex flex-column  align-items-center">
                      <label for="exampleFormControlInput1" class="form-label">BECOME AN</label>
-                     <a href="#footer" type="button" class="btn btn-outline-primary btn-lg px-4  btnadv">ADVERTISER</a>
+                     <a href="<?php echo base_url('v3/sign/up');?>" type="button" class="btn btn-outline-primary btn-lg px-4  btnadv">ADVERTISER</a>
                   </div>
                </div>
             </div>
@@ -261,9 +271,9 @@
                <div class="col-md-3 col-sm-6">
                   <h5>Join Wedebeek</h5>
                   <ul class="nav flex-column">
-                     <li class="nav-item mb-2"><a href="https://wedebeek.com/v2/sign/up" class="nav-link p-0 text-muted">Affiliate signup</a></li>
-                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Advertiser signup</a></li>
-                     <li class="nav-item mb-2"><a href="https://wedebeek.com/v2/sign/in" class="nav-link p-0 text-muted">My account</a></li>
+                     <li class="nav-item mb-2"><a href="<?php echo base_url('v2/sign/up');?>" class="nav-link p-0 text-muted">Affiliate signup</a></li>
+                     <li class="nav-item mb-2"><a href="<?php echo base_url('v3/sign/up');?>" class="nav-link p-0 text-muted">Advertiser signup</a></li>
+                     <li class="nav-item mb-2"><a href="<?php echo base_url('v2/sign/up');?>" class="nav-link p-0 text-muted">My account</a></li>
                   </ul>
                </div>
                <div class="col-md-3 col-sm-6">
@@ -278,7 +288,7 @@
                   <ul class="nav flex-column">
                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Products</a></li>
                      <li class="nav-item mb-2"><a href="<?php echo base_url('/v2/news/2');?>" class="nav-link p-0 text-muted">Terms and Conditions (Affiliates) </a></li>
-                     <li class="nav-item mb-2"><a href="<?php echo base_url('/v2/news/3');?>" class="nav-link p-0 text-muted">Terms and Conditions (Advertisers) </a></li>
+                     <li class="nav-item mb-2"><a href="<?php echo base_url('/v3/news/3');?>" class="nav-link p-0 text-muted">Terms and Conditions (Advertisers) </a></li>
                   </ul>
                </div>
                <div class="col-md-3 col-sm-6">
@@ -369,6 +379,7 @@
       <!--end icon-->
       <script src="<?php echo base_url('temp/default/home_site');?>/js/jquery.min.js"></script>
       <script src="<?php echo base_url('temp/default/home_site');?>/js/lightslider.js"></script> 
+      <script src="<?php echo base_url('temp/default/home_site'); ?>/js/menuhead.js"></script>    
       <script>
          $(document).ready(function() {
             urlAjax= '<?php echo base_url('ajax-aboutus');?>';
