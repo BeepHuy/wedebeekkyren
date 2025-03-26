@@ -7,7 +7,7 @@
       <title>adminmmo</title>
       <!-- Bootstrap -->
       <link href="<?php echo base_url();?>temp/admin/css/bootstrap.min.css" rel="stylesheet"/>
-      <link href="<?php echo base_url();?>temp/admin/css/bootstrap-theme.min" rel="stylesheet"/>
+      <link href="<?php echo base_url();?>temp/admin/css/bootstrap-theme.min.css" rel="stylesheet"/>
       <link href="<?php echo base_url();?>temp/admin/css/style.css" rel="stylesheet"/>
        <!-- dat truoc vai gia tri ban dau-->    
       <script>

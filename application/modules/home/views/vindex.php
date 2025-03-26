@@ -16,7 +16,7 @@
       <link rel="stylesheet"  href="<?php echo base_url('temp/default/home_site'); ?>/css/menuhead.css" />
       <link rel="stylesheet"  href="<?php echo base_url('temp/default/pages');?>/css/style.css"/>   
       <meta name='ir-site-verification-token' value='- 296595'>
-      <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ea5bb59c39f62b49f504a89e5b83412b3e996f57"></script>
+      <script type="text/javascript" src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ea5bb59c39f62b49f504a89e5b83412b3e996f57"></script>
    </head>
    <body>
       <!-- Fixed navbar -->

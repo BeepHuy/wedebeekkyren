@@ -105,7 +105,9 @@
 
             <!-- Logo -->
             <div class="brand" >
-                <img src=" <?php echo base_url() ?>/upload/files/website_logo_transparent_background.png" class="logo1" style="width:450px; height:auto">
+                <img src=" <?php echo base_url() ?>/upload/files/website_logo_transparent_background.png" 
+                    class="logo1" style="width:450px; height:auto; cursor: grab;"
+                    onclick="window.location.href='<?php echo base_url(''); ?>';">
                 <span>Wedebeek Technology Limited</span>
             </div>
             <!-- End Logo -->
