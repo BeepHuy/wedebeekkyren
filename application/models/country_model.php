@@ -7,5 +7,15 @@ class Country_model extends CI_Model {
         return $query->result();
 
     }
+    public function get_categories()
+    {
+        $query = $this->db->get('cpalead_categories'); // Lấy tất cả dữ liệu từ bảng categories
+        return $query->result();
+    }
+    public function get_traftype()
+    {
+        $query = $this->db->get('cpalead_traftype'); // Lấy tất cả dữ liệu từ bảng traftype
+        return $query->result();
+    }
 }
 ?>

@@ -11,6 +11,8 @@
     <link href="<?php echo base_url('/temp/pulisher/css/error.css'); ?>" rel="stylesheet">
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <style>
         .ajax-error {
             color: white !important;
@@ -28,6 +30,13 @@
             border-radius: 5px;
             margin-top: 15px;
         }
+       /* Tùy chỉnh giao diện của Select2 */
+        .select2-container--default .select2-selection--multiple {
+            border-radius: 20px;
+            border: 2px solid var(--border-color);
+            padding: 5px;
+        }
+
     </style>
 
 </head>
@@ -173,18 +182,14 @@
                         <textarea name="biz_desc" class="textarea" id="biz_desc" style="height: 70px;"></textarea>
                     </div>
                     <div class="form-row">
-                        <label for="traffic_src">Allow Traffic Source *</label>
-                        <div class='sc-gipzik fusulQ traffic'>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Google Organic" id="3hb7d8ttm7s"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="3hb7d8ttm7s"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Google Organic</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Paid Google Search" id="2cdavgdda5s"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="2cdavgdda5s"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Paid Google Search</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Display Advertising" id="6utpnjadgav"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="6utpnjadgav"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Display Advertising</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Referral (backlink/ banner)" id="372aiuurbkgg"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="372aiuurbkgg"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" style='white-space: nowrap; width: 100%;'>Referral (backlink/ banner)</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Social Traffic" id="32so1b6sjt8g"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="32so1b6sjt8g"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Social Traffic</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Media Buyer (network adverting)" id="3ieemgb049m"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="3ieemgb049m"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" style='white-space: nowrap; width: 100%;'>Media Buyer (network adverting)</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Email Traffic" id="8h66fjlbtt6"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="8h66fjlbtt6"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Email Traffic</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Mobile Traffic" id="8kedd012c3a"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="8kedd012c3a"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Mobile Traffic</span></label></div>
-                            <div class="_2yRUtwQzTcJQHKHRzGIAfL _1zMi2ue1d1ggkuAFpIUpBi" style='height: fit-content;'><input class="" type="checkbox" name="aff_type[]" value="Other Traffic" id="28mnqg6q639g"><label class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00" for="28mnqg6q639g"><span class="_7H-rw2-gbQmIWhoWOkS93 css-7c2d00">Other Traffic</span></label></div>
-                        </div>
+                        <label for="traftype">Allow Traffic Source *</label>
+                        <select name="aff_type[]" id="traftype" class="select2-custom" multiple>
+                            <?php foreach ($traftype as $value) { ?>
+                                <option value="<?php echo $value->name ?>" id="">
+                                    <?php echo $value->name ?>
+                                </option>
+                            <?php } ?>
+                        </select>
                     </div>
 
                     <div>
@@ -235,6 +240,11 @@
 
     <script>
         $(document).ready(function() {
+            $('#traftype').select2({
+                placeholder: "Select traffic sources",
+                allowClear: true,
+                closeOnSelect: false
+            });
             //Trả về danh sách state khi chọn country
             $('#country_id').change(function() {
                 var ckey = $('#country_id option:selected').attr('id');
@@ -283,8 +293,7 @@
                             obj = JSON.parse(data);
                         } catch (e) {
                             // Nếu có lỗi parse JSON
-                            alert('Phản hồi từ server không hợp lệ!');
-
+                            alert('server error, max image size is 2M');
                             return;
                         }
                         if (obj.error == 0) {
