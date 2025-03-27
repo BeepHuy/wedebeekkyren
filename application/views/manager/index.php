@@ -55,7 +55,10 @@
                </button>
                <a class="navbar-brand" href="#">
                <img alt="" class="pull-left" src="<?php echo $this->session->userdata('adavata');?>"/>
-               <span class="pull-left hidden-xs"><?php echo $this->pub_config['sitename'];?></span>
+               <span class="pull-left hidden-xs">
+                  <?php echo isset($this->pub_config['sitename']) ? $this->pub_config['sitename'] : 'Default Site Name'; ?>
+               </span>
+
                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->

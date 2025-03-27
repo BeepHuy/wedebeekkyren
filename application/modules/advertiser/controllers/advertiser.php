@@ -38,11 +38,17 @@ class Advertiser extends CI_Controller
     function dashboard()
     {
         $data = array();
-        $data['newoffer'] = $this->Home_model->get_data('offer', array('show' => 1, 'smtype' => 1, 'smartlink' => 0, 'smartoff' => 0, 'adverid' => $this->member->id), array(6), array('RAND()'));
+        $data['newoffer']= $this->Home_model->get_data('offer',array('show'=>1,'smtype'=>1,'smartlink'=>0,'smartoff'=>0),array(6),array('id','DESC'));
+        // $data['newoffer'] = $this->Home_model->get_data('offer', array('show' => 1, 'smtype' => 1, 'smartlink' => 0, 'smartoff' => 0, 'adverid' => $this->member->id), array(6), array('RAND()'));
         //$data['topconvert']= $this->Home_model->get_data('offer',array('show'=>1),array(9),array('lead','DESC'));
         $data['news'] = $this->Home_model->get_data('content', array('show' => 1), array(9), array('id', 'DESC'));
         // $data['manager'] = $this->Home_model->get_one('manager', array('id' => 1));
-        $data['advertiser'] = $this->Home_model->get_one('advertiser', array('id' => $this->member->id));
+        $advertiser = $this->Home_model->get_one('advertiser', array('id' => $this->member->id));
+        // Unserialize the mailling data
+        if ($advertiser && !empty($advertiser->mailling)) {
+            $advertiser->mailling_data = unserialize($advertiser->mailling);
+        }
+        $data['advertiser'] = $advertiser;
         //Top Country Breakdown - click lead -unqine
         //$qr = 'SELECT offerid,oname,count(id) as click, sum(flead) as lead, count(DISTINCT ip) as uniq, sum(amount) as pay  FROM `cpalead_tracklink`  WHERE userid=? and date BETWEEN ? AND ?  group by offerid';
         //dayli sstatic

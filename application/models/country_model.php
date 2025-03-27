@@ -7,9 +7,9 @@ class Country_model extends CI_Model {
         return $query->result();
 
     }
-    public function get_categories()
+    public function get_offercat()
     {
-        $query = $this->db->get('cpalead_categories'); // Lấy tất cả dữ liệu từ bảng categories
+        $query = $this->db->get('cpalead_offercat'); // Lấy tất cả dữ liệu từ bảng categories
         return $query->result();
     }
     public function get_traftype()

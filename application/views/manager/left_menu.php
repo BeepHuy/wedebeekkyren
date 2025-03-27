@@ -30,6 +30,15 @@
                 <span class="hidden-xs hidden-sm">Affiliate</span>
             </a>
         </li>
+
+        <li class="<?php echo ($this->uri->segment(2) == 'advertiser') ? 'active' : ''; ?>">
+            <a href="<?php echo base_url($this->config->item('manager').'/advertiser');?>">
+                <span class="glyphicon glyphicon-user"></span>
+                <span class="hidden-xs hidden-sm">Advertiser</span>
+            </a>
+        </li>
+
+
         <li>
             <a href="<?php echo base_url($this->config->item('manager').'/route/network/list');?>">
                 <span class="glyphicon glyphicon-inbox"></span>

@@ -143,19 +143,6 @@
                         <label for="st_reg">State/Region *</label>
                         <select name="mailling[state]" id="st_reg" style="text-align: left;"></select>
                     </div>
-
-                    <div class="form-row">
-                        <label for="category_id">Category *</label>
-                        <select name="mailling[category]" id="category_id" style="text-align: left;">
-                            <option value="">Please select category</option>
-                            <?php foreach ($category as $value) { ?>
-                                <option value="<?php echo $value->title ?>" id="<?php echo $value->title ?>">
-                                    <?php echo $value->title ?>
-                                </option>
-                            <?php } ?>
-                        </select>
-                    </div>
-
                     <div class="form-row">
                         <label for="zip">Zip Code *</label>
                         <input type="text" name="mailling[zip]" id="zip">
@@ -181,6 +168,27 @@
                         <label for="biz_desc">Briefly Describe Your Business Activities *</label>
                         <textarea name="biz_desc" class="textarea" id="biz_desc" style="height: 70px;"></textarea>
                     </div>
+                    <div class="form-row">
+                        <label for="offercat_id">Offer Categories *</label>
+                        <select name="mailling[offercat]" id="offercat_id" class="select2-custom" multiple>
+                            <?php foreach ($offercat as $value) { ?>
+                                <option value="<?php echo $value->id ?>" id="">
+                                    <?php echo $value->offercat ?>
+                                </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                
+                    <!-- <div class="form-row">
+                        <label for="category_id">Category *</label>
+                        <select name="mailling[category]" id="category_id" class="select2-custom" multiple>
+                            <?php foreach ($offercat as $value) { ?>
+                                <option value="<?php echo $value->offercat ?>" id="">
+                                    <?php echo $value->offercat ?>
+                                </option>
+                            <?php } ?>
+                        </select>
+                    </div> -->
                     <div class="form-row">
                         <label for="traftype">Allow Traffic Source *</label>
                         <select name="aff_type[]" id="traftype" class="select2-custom" multiple>
@@ -240,10 +248,16 @@
 
     <script>
         $(document).ready(function() {
-            $('#traftype').select2({
-                placeholder: "Select traffic sources",
+            $('#offercat_id').select2({
+                placeholder: "Please select your offer categories",
                 allowClear: true,
-                closeOnSelect: false
+                closeOnSelect: false 
+            });
+
+            $('#traftype').select2({
+                placeholder: "Please select your offer traffic sources",
+                allowClear: true,
+                closeOnSelect: false 
             });
             //Trả về danh sách state khi chọn country
             $('#country_id').change(function() {
