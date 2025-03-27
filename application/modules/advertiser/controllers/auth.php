@@ -145,7 +145,14 @@ class Auth extends CI_Controller {
                         $this->session->set_userdata('logedin', 1);
 
                         $this->session->set_userdata('advid', $log->id);
-                        $this->session->set_userdata('advdata', array('id' => $log->id, 'chatuser' => $log->chatuser, 'balance' => $log->balance, 'email' => $log->email));
+                        $chatuser = isset($log->chatuser) ? $log->chatuser : ''; // Gán giá trị mặc định nếu không tồn tại
+                        $this->session->set_userdata('advdata', array(
+                            'id' => $log->id,
+                            'chatuser' => $chatuser,
+                            'balance' => $log->balance,
+                            'email' => $log->email
+                        ));
+                        
                         $err = 0;
                         $dt = ' Login successfully';
                     }
@@ -156,7 +163,7 @@ class Auth extends CI_Controller {
                 }
             } else {
 
-                $dt = form_error('email') . ' ' . form_error('advertiser');
+                $dt = form_error('email') . ' ' . form_error('password');
             }
 
             //gửi kết quả về cliend
@@ -314,12 +321,12 @@ class Auth extends CI_Controller {
             }
         } elseif ($method === 'GET') {
             $data['country'] = $this->Country_model->get_country();
-            $data['category'] = $this->Country_model->get_categories(); // Lấy danh sách category
+            $data['offercat'] = $this->Country_model->get_offercat(); // Lấy danh sách category
             $data['traftype'] = $this->Country_model->get_traftype(); // Lấy danh sách category
             $this->load->view('auth/signup', array(
                 'pubconfig' => $this->pub_config['termsinfo'],
                 'country' => $data['country'],
-                'category' => $data['category'], // Truyền dữ liệu category sang view
+                'offercat' => $data['offercat'], // Truyền dữ liệu category sang view
                 'traftype' => $data['traftype'] // Truyền dữ liệu traftype sang view
             ));
         }
@@ -376,12 +383,12 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('reg_cert', 'Your Company Registration Certificate', 'callback_validate_file');
         $this->form_validation->set_rules('mailling[country]', 'Your Country', 'required');
         $this->form_validation->set_rules('mailling[state]', 'Your State/Region', 'required');
-        $this->form_validation->set_rules('mailling[category]', 'Your Category', 'required');
         $this->form_validation->set_rules('mailling[zip]', 'Your Zip Code', 'required|alpha_numeric');
         $this->form_validation->set_rules('payout', 'Payout', 'Required|callback_check_payout');
         $this->form_validation->set_rules('mailling[website]', 'Website URL', 'required|callback_check_website');
         $this->form_validation->set_rules('mailling[offername]', 'Your offername', 'required');
         $this->form_validation->set_rules('biz_desc', 'Briefly Describe Your Business Activities', 'required');
+        $this->form_validation->set_rules('mailling[offercat]', 'Your Category', 'required');
         $this->form_validation->set_rules('aff_type', 'Traffic Source', 'required');
         $this->form_validation->set_rules('mailling[terms]', 'Terms and Conditions', 'required');
         $this->form_validation->set_rules('agree2', 'Terms and Conditions', 'required');
