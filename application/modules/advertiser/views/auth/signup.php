@@ -22,6 +22,9 @@
             margin-top: 15px;
             display: none;
         }
+        .nice2 {
+            display: block !important;
+        }
 
         .alert-success {
             color: white !important;
@@ -170,25 +173,14 @@
                     </div>
                     <div class="form-row">
                         <label for="offercat_id">Offer Categories *</label>
-                        <select name="mailling[offercat]" id="offercat_id" class="select2-custom" multiple>
-                            <?php foreach ($offercat as $value) { ?>
-                                <option value="<?php echo $value->id ?>" id="">
-                                    <?php echo $value->offercat ?>
-                                </option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                
-                    <!-- <div class="form-row">
-                        <label for="category_id">Category *</label>
-                        <select name="mailling[category]" id="category_id" class="select2-custom" multiple>
+                        <select name="offercat[]" id="offercat_id" class="select2-custom" multiple>
                             <?php foreach ($offercat as $value) { ?>
                                 <option value="<?php echo $value->offercat ?>" id="">
                                     <?php echo $value->offercat ?>
                                 </option>
                             <?php } ?>
                         </select>
-                    </div> -->
+                    </div>
                     <div class="form-row">
                         <label for="traftype">Allow Traffic Source *</label>
                         <select name="aff_type[]" id="traftype" class="select2-custom" multiple>
@@ -213,7 +205,7 @@
                         </div>
 
                         <div class="checkbox-item">
-                            <input type="checkbox" name="agree2" id="agree2">
+                            <input type="checkbox" name="mailling[agree2]" id="agree2">
                             <label for="agree2">
                                 <span class="">I hereby consent and allow the use of my and/or my companys information, including sharing with a third party, to assess, detect, prevent or otherwise enable detection and prevention of malicious, invalid or unlawful activity and/or general fraud prevention.</span>
                             </label>
@@ -286,7 +278,40 @@
                     }
                 });
             });
-
+            // xữ lý trường hợp nếu file imag lớn hơn 2m
+            $('#reg_cert').on('change', function() {
+                var maxSize = 2 * 1024 * 1024; // 2MB tính bằng byte
+                var files = this.files;
+                var oversizedFiles = [];
+                
+                // Kiểm tra từng file
+                for (var i = 0; i < files.length; i++) {
+                    if (files[i].size > maxSize) {
+                        oversizedFiles.push(files[i].name);
+                    }
+                }
+                
+                // Nếu có file vượt quá 2MB
+                if (oversizedFiles.length > 0) {
+                    // Hiển thị thông báo lỗi
+                    $('.ajax-error')
+                        .removeClass('alert alert-success')
+                        .addClass('nice2') 
+                        .html('The following files are over 2MB: ' + oversizedFiles.join(', ') + '. Please choose smaller files.')
+                        .show();
+                    
+                    // Tự động ẩn sau 3 giây
+                        setTimeout(function() {
+                            $('.ajax-error')
+                            .removeClass('nice2') 
+                            $('.ajax-error').hide();
+                        }, 5000);
+                } else {
+                    $('.ajax-error')
+                        .removeClass('nice2') 
+                    $('.ajax-error').hide();
+                }
+            });
             // ----- AJAX submit form -----
             $('#registerForm').on('submit', function(e) {
                 e.preventDefault();

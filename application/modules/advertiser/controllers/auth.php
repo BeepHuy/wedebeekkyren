@@ -251,6 +251,7 @@ class Auth extends CI_Controller {
                 $this->load->helper('string');
                 $mangaunhien = random_string('alnum', 16);
                 $data['mailling']['aff_type']  = serialize($data['aff_type']);
+                $data['mailling']['offercat']  = serialize($data['offercat']);
                 $idata['mailling'] = serialize($data['mailling']);
                 $idata['manager'] = $managerid;
                 $idata['password'] = sha1(md5($data['password']));
@@ -388,10 +389,10 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('mailling[website]', 'Website URL', 'required|callback_check_website');
         $this->form_validation->set_rules('mailling[offername]', 'Your offername', 'required');
         $this->form_validation->set_rules('biz_desc', 'Briefly Describe Your Business Activities', 'required');
-        $this->form_validation->set_rules('mailling[offercat]', 'Your Category', 'required');
+        $this->form_validation->set_rules('offercat', 'Your Category', 'required');
         $this->form_validation->set_rules('aff_type', 'Traffic Source', 'required');
         $this->form_validation->set_rules('mailling[terms]', 'Terms and Conditions', 'required');
-        $this->form_validation->set_rules('agree2', 'Terms and Conditions', 'required');
+        $this->form_validation->set_rules('mailling[agree2]', 'Terms and Conditions', 'required');
         return $this->form_validation->run(); // Trả về kết quả true/false
     }
     public function check_name($str)
@@ -480,7 +481,7 @@ class Auth extends CI_Controller {
         if (preg_match('/^[0-9\@\#\$\%\^\&\*\(\)\_\+\!\-\=\[\]\{\}\|\;\:\'\"\,\.\/\<\>\?]+$/', $payout)) {
             return TRUE; // Hợp lệ
         } else {
-            $this->form_validation->set_message('check_payout', 'Please enter The Payout field contains invalid characters!');
+            $this->form_validation->set_message('check_payout', 'Please enter the Payout field Accept only numbers and special characters!');
             return FALSE; // Không hợp lệ
         }
     }

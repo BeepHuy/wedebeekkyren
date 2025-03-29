@@ -38,7 +38,7 @@ class Advertiser extends CI_Controller
     function dashboard()
     {
         $data = array();
-        $data['newoffer']= $this->Home_model->get_data('offer',array('show'=>1,'smtype'=>1,'smartlink'=>0,'smartoff'=>0),array(6),array('id','DESC'));
+        $data['newoffer'] = $this->Home_model->get_data('offer', array('show' => 1, 'smtype' => 1, 'smartlink' => 0, 'smartoff' => 0), array(6), array('id', 'DESC'));
         // $data['newoffer'] = $this->Home_model->get_data('offer', array('show' => 1, 'smtype' => 1, 'smartlink' => 0, 'smartoff' => 0, 'adverid' => $this->member->id), array(6), array('RAND()'));
         //$data['topconvert']= $this->Home_model->get_data('offer',array('show'=>1),array(9),array('lead','DESC'));
         $data['news'] = $this->Home_model->get_data('content', array('show' => 1), array(9), array('id', 'DESC'));
@@ -87,43 +87,69 @@ class Advertiser extends CI_Controller
 
         redirect(base_url('v3/profile/payment'));
     }
-    function profile(){
+    function profile()
+    {
 
-        if($_POST){
-            if($this->input->post('action')){
-                if($_POST['action']=='Update Password'){//change passsưord
+        if ($_POST) {
+            if ($this->input->post('action')) {
+                if ($_POST['action'] == 'Update Password') { //change passsưord
                     echo $this->changepass();
-                }
-                elseif($_POST['action']=='update_info'){//profile
+                } elseif ($_POST['action'] == 'update_info') { //profile
                     echo $this->update_info();
-                }
-                elseif($_POST['action']=='deletePostBack'){//del posstback
+                } elseif ($_POST['action'] == 'deletePostBack') { //del posstback
                     echo $this->deletePostBack();
-                }
-                elseif($_POST['action']=='addPostback'){//addpostback savepayoneer
+                } elseif ($_POST['action'] == 'addPostback') { //addpostback savepayoneer
                     echo $this->addPostback();
-                }
-                elseif($_POST['payment_method']=='paypal'){
+                } elseif ($_POST['payment_method'] == 'paypal') {
                     echo $this->savepaypal();
-
-                }elseif($_POST['payment_method']=='wire'||$_POST['payment_method']=='Bank Wire (VN Only)'){
+                } elseif ($_POST['payment_method'] == 'wire' || $_POST['payment_method'] == 'Bank Wire (VN Only)') {
                     echo $this->savewire();
-                }elseif($_POST['payment_method']=='payoneer'){
+                } elseif ($_POST['payment_method'] == 'payoneer') {
                     echo $this->savepayoneer();
-
                 }
             }
-           return;
-
-
-        }else{
-            $data['postBack'] = $this->Home_model->get_data('postback',array('affid'=>$this->member->id));
+            return;
+        } else{
+            $data['postBack'] = $this->Home_model->get_data('postback', array('affid' => $this->member->id));
             $data['userData'] = $this->member;
-            $data['userData']->reg_cert = explode(',', $data['userData']->reg_cert ); // Tách chuỗi reg_cert thành mảng
-            $content =$this->load->view('profile/profile.php',$data,true);
-            $this->load->view('default/vindex.php',array('content'=>$content));
-        }
+            $data['userData']->reg_cert = explode(',', $data['userData']->reg_cert);
 
+            // Lấy tất cả categories, country, traffic types
+            $data['all_categories'] = $this->db->select('id, offercat')->from('offercat')->get()->result();
+            $data['all_traftype'] = $this->db->select('id, name')->from('traftype')->get()->result();
+            $data['all_countries'] = $this->db->select('id, country, keycode')->from('cpalead_country')->where('show', 1)->get()->result();
+            // Giải mã dữ liệu mailing
+            $mailing_data = unserialize($this->member->mailling);
+
+            // Lấy country state đã chọn (từ mailing_data)
+            $data['selected_country'] = isset($mailing_data['country']) ? $mailing_data['country'] : '';
+            $data['selected_state'] = isset($mailing_data['state']) ? $mailing_data['state'] : '';
+
+            // Lấy danh sách traffic sources đã chọn
+            $selected_traffic_sources = [];
+            if (!empty($mailing_data['aff_type'])) {
+                $aff_type = unserialize($mailing_data['aff_type']);
+                if (is_array($aff_type)) {
+                    $selected_traffic_sources = $aff_type;
+                }
+            }
+
+            // Lấy danh sách offer categories đã chọn
+            $selected_categories = [];
+            if (!empty($mailing_data['offercat'])) {
+                $offercat = unserialize($mailing_data['offercat']);
+                if (is_array($offercat)) {
+                    $selected_categories = $offercat;
+                }
+            }
+
+            // Thêm vào data để sử dụng trong view
+            $data['selected_traffic_sources'] = $selected_traffic_sources;
+            $data['selected_categories'] = $selected_categories;
+
+        $content =$this->load->view('profile/profile.php',$data,true);
+        $this->load->view('default/vindex.php',array('content'=>$content));
+        }
     }
     function ajax_test_postback()
     {
@@ -243,44 +269,81 @@ class Advertiser extends CI_Controller
     function update_info()
     { //gửi ajxx về để update thông tin
         if ($_POST) {
-            // [im_service] [firstname][lastname]  [company]
-            //[ad] [ad2] [city]  [country] [state] [zip] [phone] [hear_about] => )
 
-            //im_service im_name ///mailling[im_service]  mailling[im_info]
-            $this->form_validation->set_rules('im_service', 'Skype ID/Telegram', 'trim|xss_clean');
-            $this->form_validation->set_rules('avartar', 'Avartar', 'trim|xss_clean');
-            $this->form_validation->set_rules('firstname', 'First Name', 'trim|xss_clean');
-            $this->form_validation->set_rules('lastname', 'Last Name', 'trim|xss_clean');
-            $this->form_validation->set_rules('company', 'Сompany Name', 'trim|xss_clean');
-
-            $this->form_validation->set_rules('ad', 'Address Line 1', 'trim|required|xss_clean');
-            $this->form_validation->set_rules('ad2', 'Address Line 2', 'trim|xss_clean');
+            $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|callback_check_email');
+            $this->form_validation->set_rules('im_service', 'Skype ID/Telegram', 'trim|required|xss_clean');
+            $this->form_validation->set_rules('firstname', 'First Name', 'trim|required|xss_clean|callback_check_name');
+            $this->form_validation->set_rules('lastname', 'Last Name', 'trim|required|xss_clean|callback_check_name');
+            $this->form_validation->set_rules('company', 'Сompany Name', 'trim|required|xss_clean');
+            $this->form_validation->set_rules('zip', 'Zip code', 'trim|required|alpha_numeric|xss_clean');
+            $this->form_validation->set_rules('payout', 'Payout', 'trim|required|xss_clean|callback_check_payout');
+            $this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric|xss_clean');
+            $this->form_validation->set_rules('street', 'Street', 'trim|required|xss_clean');
             $this->form_validation->set_rules('city', 'City', 'trim|required|xss_clean');
-            $this->form_validation->set_rules('country', 'country', 'trim|xss_clean');
+            $this->form_validation->set_rules('country', 'country', 'trim|required|xss_clean');
             $this->form_validation->set_rules('state', 'State', 'trim|required|xss_clean');
-            $this->form_validation->set_rules('zip', 'Zipcode', 'trim|required|xss_clean');
-            $this->form_validation->set_rules('phone', 'Phone', 'trim|required|xss_clean'); //phone và email là trường riêng
-            $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean'); //phone và email là trường riêng
-            $this->form_validation->set_rules('hear_about', 'How did you find us?', 'trim|xss_clean');
+            $this->form_validation->set_rules('offername', 'Offer Name', 'trim|required|xss_clean');
+            $this->form_validation->set_rules('aff_type[]', 'Traffic Source', 'required');
+            $this->form_validation->set_rules('offercat[]', 'Offer Categories', 'required');
+            $this->form_validation->set_rules('website', 'Website', 'trim|required|xss_clean|callback_check_website');
+            $this->form_validation->set_rules('biz_desc', 'Briefly Describe Your Business Activities', 'required|max_length[3000]');
+
+
             if ($this->form_validation->run() == TRUE) {
                 $data = $this->security->xss_clean($_POST); // du lieu gui ve tu form
-
                 $member_info = $this->member_info;
+
+                // $member_info['email'] = trim($data['email']);
                 $member_info['im_service'] = trim($data['im_service']);
-                $member_info['avartar'] = trim($data['avartar']);
                 $member_info['firstname'] = trim($data['firstname']);
                 $member_info['lastname'] = trim($data['lastname']);
                 $member_info['company'] = trim($data['company']);
-                $member_info['ad'] = trim($data['ad']);
-                $member_info['ad2'] = trim($data['ad2']);
+                $member_info['street'] = trim($data['street']);
                 $member_info['city'] = trim($data['city']);
                 $member_info['country'] = trim($data['country']);
                 $member_info['state'] = trim($data['state']);
                 $member_info['zip'] = trim($data['zip']);
-                $member_info['hear_about'] = trim($data['hear_about']);
+                $member_info['offername'] = trim($data['offername']);
+                $member_info['website'] = trim($data['website']);
+                // Xử lý Traffic Source
+                $aff_type = $this->input->post('aff_type', true);
+                if (!empty($aff_type) && is_array($aff_type)) {
+                    $member_info['aff_type'] = serialize(array_filter($aff_type));
+                } else {
+                    $member_info['aff_type'] = serialize([]);
+                }
+                // Xử lý Offer Categories
+                $offercat = $this->input->post('offercat', true);
+                if (!empty($offercat) && is_array($offercat)) {
+                    $member_info['offercat'] = serialize(array_filter($offercat));
+                } else {
+                    $member_info['offercat'] = serialize([]);
+                }
+                //Code xử lý hình ảnh
+                $oldimg = [];
+                if (!empty($this->member->reg_cert)) {
+                    $oldimg = explode(',', $this->member->reg_cert);
+                }
 
-                // $member_info['timezone'] = trim($data['timezone']);//phone
-                //$member_info['website'] = trim($data['website']);//phone
+                // Xóa file cũ nếu có yêu cầu
+                $delete = $this->input->post('imageToDelete');
+                if (isset($delete) && is_array($delete)) {
+                    foreach ($delete as $image) {
+                        if (($key = array_search($image, $oldimg)) !== false) {
+                            unset($oldimg[$key]);
+                        }
+                    }
+                    $oldimg = array_values($oldimg); // Sắp xếp lại key mảng sau khi xóa
+                }
+
+                // Upload file mới (nếu có)
+                if (isset($_FILES['reg_cert']) && !empty($_FILES['reg_cert']['name'][0])) {
+                    $newImages = $this->img_handle($_FILES['reg_cert']);
+                    if ($newImages && is_array($newImages)) {
+                        $oldimg = array_merge($oldimg, $newImages);
+                    }
+                }
+
                 //kiểm tra email
                 $this->db->where(array('email' => $data['email'], 'id !=' => $this->session->userdata('advid')));
                 $check = $this->db->get('cpalead_advertiser')->row();
@@ -288,7 +351,17 @@ class Advertiser extends CI_Controller
                     return '<strong>FAILURE: </strong>This email address is already being used!';
                 }
                 $this->db->where('id', $this->session->userdata('advid'));
-                if ($this->db->update('cpalead_advertiser', array('mailling' => serialize($member_info), 'phone' => trim($data['phone']), 'email' => trim($data['email'])))) {
+                if ($this->db->update(
+                    'cpalead_advertiser',
+                    array(
+                        'mailling' => serialize($member_info),
+                        'phone' => trim($data['phone']),
+                        'email' => trim($data['email']),
+                        'payout' => trim($data['payout']),
+                        'reg_cert' => implode(',', $oldimg),
+                        'biz_desc' => $data['biz_desc']
+                    )
+                )) {
                     return '<strong>SUCCESS: </strong> Successfully edited profile.';
                 } else {
                     return '<strong>FAILURE: </strong>Update error!';
@@ -298,6 +371,115 @@ class Advertiser extends CI_Controller
             }
         }
     }
+    function check_website($website)
+    {
+        // Kiểm tra nếu URL bắt đầu bằng "https://"
+        if (preg_match('/^https:\/\/.+$/', $website)) {
+            return TRUE; // Hợp lệ
+        } else {
+            $this->form_validation->set_message('check_website', 'The Website URL must start with "https://".');
+            return FALSE; // Không hợp lệ
+        }
+    }
+    function check_payout($payout)
+    {
+        // Chỉ cho phép số và các ký tự đặc biệt
+        if (preg_match('/^[0-9\@\#\$\%\^\&\*\(\)\_\+\!\-\=\[\]\{\}\|\;\:\'\"\,\.\/\<\>\?]+$/', $payout)) {
+            return TRUE; // Hợp lệ
+        } else {
+            $this->form_validation->set_message('check_payout', 'Please enter the Payout field Accept only numbers and special characters !');
+            return FALSE; // Không hợp lệ
+        }
+    }
+    function img_handle($newimg)
+    {
+
+        $path = FCPATH . 'upload/adv/';
+
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $image_names = [];
+
+        foreach ($newimg['name'] as $key => $name) {
+            //Log từng file
+            error_log("Processing file: " . $name);
+            error_log("File error status: " . $newimg['error'][$key]);
+            error_log("File temp name: " . $newimg['tmp_name'][$key]);
+
+            if ($newimg['error'][$key] === UPLOAD_ERR_OK) {
+                $tmp_name = $newimg['tmp_name'][$key];
+
+                // Kiểm tra file tồn tại
+                if (!is_uploaded_file($tmp_name)) {
+                    error_log("File not found in temp directory: " . $tmp_name);
+                    continue;
+                }
+
+                // Thêm prefix vào tên file
+                $prefix = uniqid();
+                $new_filename = $prefix . '_' . $name;
+
+                // Log trước khi move file
+                error_log("Attempting to move file from {$tmp_name} to {$path}{$new_filename}");
+
+                if (move_uploaded_file($tmp_name, $path . $new_filename)) {
+                    error_log("Successfully moved file: " . $new_filename);
+                    $image_names[] = $new_filename;  // Lưu tên file mới có prefix
+                } else {
+                    error_log("Failed to move file: " . $new_filename);
+                    error_log("PHP upload error: " . error_get_last()['message']);
+                }
+            } else {
+                error_log("Upload error for file {$name}: " . $newimg['error'][$key]);
+            }
+        }
+
+        // Log kết quả cuối cùng
+        error_log("Final image_names array: " . print_r($image_names, true));
+
+        return !empty($image_names) ? $image_names : false;
+    }
+    // Hàm kiểm tra tùy chỉnh
+    public function check_name($str)
+    {
+        // Cho phép các chữ cái Unicode (có dấu) và không giới hạn ngôn ngữ
+        if (!preg_match("/^\p{L}+$/u", $str)) {
+            $this->form_validation->set_message('check_name', 'The %s field must contain only letters (including accented letters).');
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
+
+    public function check_email($email)
+    {
+        // Lấy email và id hiện tại từ session
+        $current_email = $this->session->userdata('email');
+        $current_id    = $this->session->userdata('advid');
+
+        // Nếu email nhập vào trùng (so sánh không phân biệt chữ hoa thường) với email hiện tại, cho phép update
+        if (strcasecmp($email, $current_email) === 0) {
+            return TRUE;
+        }
+
+        // Loại trừ bản ghi của user hiện tại khi kiểm tra email trong CSDL
+        $this->db->where('id !=', $current_id);
+        if ($this->Home_model->get_one('advertiser', ['email' => $email])) {
+            $this->form_validation->set_message('check_email', 'Email already exists!');
+            return FALSE;
+        }
+
+        // Kiểm tra định dạng email hợp lệ
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->form_validation->set_message('check_email', 'The %s field must contain a valid email address.');
+            return FALSE;
+        }
+
+        return TRUE;
+    }
+
     private function savewire()
     {
         if ($_POST) {
@@ -374,7 +556,6 @@ class Advertiser extends CI_Controller
             }
         }
     }
-
     /////////*******************************news****************************************************** */
 
 
